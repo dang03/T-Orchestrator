@@ -1,0 +1,11 @@
+development:
+  host: 127.0.0.1
+  keyspace: tnova_monitoring_dev
+
+production:
+  host: 127.0.0.1
+  keyspace: tnova_monitoring
+
+test:
+  host: 127.0.0.1
+  keyspace: tnova_monitoring_test

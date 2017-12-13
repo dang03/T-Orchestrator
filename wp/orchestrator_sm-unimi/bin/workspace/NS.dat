@@ -1,0 +1,42 @@
+# NETWORK SERVICE DATASET
+
+data;
+
+# List of Virtual Network Functions.
+set VNFnodes := 0 1 2;
+
+# List of links between Virtual Network Functions; each element is in the form 
+# (source, destination) where source and destination is a link amongst the VNFnodes set.
+set NSlinks := (0,1) (1,2);
+
+# Number of paths of the NS (scalar).
+set IndexDelayPaths := 1;
+
+# Array of paths; each element of the array is a list of links chosen amongst the
+# NSlinks set.
+set PD[1] := (0,1) (1,2);
+
+# List of hardware requirements for each VNF; parameters where defined in the NI.dat
+# and must be set accordingly.
+param: 		ResourceNodeDemand :=
+0 cpu 		25.0
+1 cpu		30.0
+2 cpu		15.0
+0 disk		25.0
+1 disk		30.0
+2 disk		15.0
+;
+
+# List of hardware requirements for each VNF link; parameters where defined in the NI.dat
+# and must be set accordingly.
+param: 		ResourceLinkDemand :=
+0 1 bw		25.0
+1 2 bw		30.0
+;
+
+# Maximum delay per path.
+param: 		MaxDelay :=
+1 		0.20
+;
+
+end;

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="vnfd">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer" />
+                <xs:element name="vendor" type="xs:string" />
+                <xs:element name="descriptor_version" type="xs:string" />
+                <xs:element name="version" />
+                <xs:element name="vdus">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vdu" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="id" type="xs:integer" />
+                                        <xs:element name="vm_image" type="xs:string" minOccurs="0" />
+                                        <xs:element name="computation_requirements" type="xs:string" />
+                                        <xs:element name="virtual_memory_resource_element">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:integer">
+                                                        <xs:attribute name="unit" type="xs:string" use="optional" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="lifecycle_event" minOccurs="0" maxOccurs="unbounded" />
+                                        <xs:element name="constraint" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:attribute name="type" type="xs:string" use="optional" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="high_availability" type="xs:integer" minOccurs="0" />
+                                        <xs:element name="scale_in_out" type="xs:integer" minOccurs="0" />
+                                        <xs:element name="OpenStack_Flavour" type="xs:string" minOccurs="0" />
+                                        <xs:element name="vnfc" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="id" type="xs:integer" />
+                                                    <xs:element name="connection_point" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="id" type="xs:integer" />
+                                                                <xs:element name="virtual_link_reference" type="xs:string" />
+                                                                <xs:element name="virtual_network_bandwidth">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:integer">
+                                                                                <xs:attribute name="unit" type="xs:string" />
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="type" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="monitoring_parameter" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="name" type="xs:string" use="optional" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="cpu" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="memory_hot_add" minOccurs="0" />
+                                                    <xs:element name="cpu_instruction_set_extension" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                                                    <xs:element name="cpu_model" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+                                                    <xs:element name="cpu_model_specification_binding" minOccurs="0" />
+                                                    <xs:element name="cpu_min_clock_speed" minOccurs="0" />
+                                                    <xs:element name="cpu_core_reservation" type="xs:integer" minOccurs="0" />
+                                                    <xs:element name="cpu_simulation_multithreading_hw_thread_specification" minOccurs="0" />
+                                                    <xs:element name="cpu_core_oversubscription_policy" minOccurs="0" />
+                                                    <xs:element name="cpu_core_and_hw_thread_allocation_topology_policy" minOccurs="0" />
+                                                    <xs:element name="cpu_last_level_cache_size" minOccurs="0" />
+                                                    <xs:element name="cpu_direct_io_access_to_cache" minOccurs="0" />
+                                                    <xs:element name="cpu_translation_look_aside_buffer_parameter" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="tlb_size" type="xs:string" use="optional" />
+                                                            <xs:attribute name="tlb_large_page_support" type="xs:boolean" use="optional" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="cpu_hot_add" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="memory" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="memory_parameter" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="memory_type" minOccurs="0" maxOccurs="unbounded" />
+                                                                <xs:element name="memory_speed" minOccurs="0" />
+                                                                <xs:element name="number_of_memory_channels" minOccurs="0" />
+                                                                <xs:element name="memory_oversubscription_policy" minOccurs="0" />
+                                                                <xs:element name="number_of_large_pages_required_per_vdu" type="xs:integer" minOccurs="0" />
+                                                                <xs:element name="memory_bandwidth_per_vdu" minOccurs="0" />
+                                                                <xs:element name="non-uniform_memory_architecture_allocation_policy" minOccurs="0" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="memory_hot_add" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="platform_security_parameter" minOccurs="0" maxOccurs="unbounded" />
+                                        <xs:element name="hypervisor" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="hypervisor_type" type="xs:string" />
+                                                    <xs:element name="hypervisor_version" type="xs:string" minOccurs="0" />
+                                                    <xs:element name="hypervisor_address_translation_support" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="pcie" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="platform_pcie_parameters" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="pcie_slot_type" minOccurs="0" />
+                                                                <xs:element name="max_bus_speed" minOccurs="0" />
+                                                                <xs:element name="slot_width" minOccurs="0" />
+                                                                <xs:element name="pcie_device_pass_through" type="xs:boolean" minOccurs="0" />
+                                                                <xs:element name="pcie_sr-iov" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:boolean">
+                                                                                <xs:attribute name="connection_point_id" type="xs:integer" use="optional" />
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="pcie_device_assignment_affinity" minOccurs="0" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="pcie_advanced_error_reporting" minOccurs="0" />
+                                                    <xs:element name="platform_acceleration_device" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="network_interfaces" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="network_interface_card_capabilities" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="tcp_large_segementation_offload" minOccurs="0" />
+                                                                <xs:element name="large_receive_offload" minOccurs="0" />
+                                                                <xs:element name="checksum_offload" minOccurs="0" />
+                                                                <xs:element name="receive_side_scaling" minOccurs="0" />
+                                                                <xs:element name="flow_director" minOccurs="0" />
+                                                                <xs:element name="jumbo_frame_support" minOccurs="0" />
+                                                                <xs:element name="vlan_tag_stripping" minOccurs="0" />
+                                                                <xs:element name="mirroring" type="xs:boolean" minOccurs="0" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="interface_mirroring" type="xs:boolean" minOccurs="0" />
+                                                    <xs:element name="independent_Rx-Tx_queues" minOccurs="0" />
+                                                    <xs:element name="poll_mode_driver" type="xs:boolean" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="virtual_switches" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="vswitch_capability" type="xs:string" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="storage" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="storage_requirement" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="size" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:integer">
+                                                                                <xs:attribute name="unit" type="xs:string" use="optional" />
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="type" type="xs:string" minOccurs="0" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="vdu_connection_point" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+                                                    <xs:element name="virtual_link_reference" minOccurs="0" maxOccurs="1" />
+                                                    <xs:element name="type" minOccurs="1" maxOccurs="1" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="life_cycle_event" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="dependency" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="mointoring_parameter" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="deployment_flavour" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:integer" minOccurs="1" maxOccurs="1" />
+                            <xs:element name="flavour_key" minOccurs="1" maxOccurs="1" />
+                            <xs:element name="constraint" minOccurs="0" maxOccurs="unbounded" />
+                            <xs:element name="constituent_vdu" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="vdu_reference" type="xs:integer" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="number_of_instances" type="xs:integer" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="constituent_vnfc" type="xs:integer" minOccurs="1" maxOccurs="unbounded" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="auto_scale_policy" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="manifest_file" minOccurs="0" />
+                <xs:element name="manifest_file_security" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

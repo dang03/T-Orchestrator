@@ -1,0 +1,484 @@
+{  
+  "vnfd":{  
+    "release":"T-NOVA v.0.1",
+    "id":"id number",
+    "vendor":"vendor generating this VNFD",
+    "provider_id":"function provider id",
+    "description":"description of the function of the VNF",
+    "description_version":"version of this VNFD",
+    "version":"version of VNF software",
+    "type":"TC / should an ontology be defined or this is free text input?",
+    "trade":"TRUE",
+    "billing_model":{  
+      "model":"billing model informantion e.g. PAYG",
+      "period":"billing period e.g. P1W",
+      "price":{  
+        "unit":"billing unit e.g. EUR",
+        "min_per_period":"5",
+        "max_per_period":"10",
+        "setup":"0"
+      }
+    },
+    "vdu":[  
+      {  
+        "id":"vdu uuid1",
+        "vm_image":"image reference uri",
+        "computation_requirement":{  
+          "vcpus":"number of virtual cpus"
+        },
+        "virtual_memory_resource_element":"virtual memory needed eg 10M",
+        "virtual_network_bandwidth_resources":"virtual bandwidth eg 10Mbit",
+        "lifecycle_event":{  
+          "driver":"SSH",
+          "Authentication":"private_key.pem",
+          "Authentication_Type":"private key",
+          "VNF_Container":"path/to/container e.g. /home/tnova/container/",
+          "start":{  
+            "command":"service vnf start",
+            "template_file_format":"json",
+            "Template_file":{  
+              "controller":"get_attr: [controller, floating_ip]",
+              "vdu1":"get_attr: [instance1, mngt_network_ip]",
+              "vdu2":"get_attr: [instance2, mngt_network_ip]"
+            }
+          },
+          "stop":"path/to/script",
+          "restart":"path/to/script"
+        },
+        "constraint":"placeholder for other constraints",
+        "high_availability":"ActiveActive or ActivePassive",
+        "scale_in_out":{  
+          "minimum":"minimum number of instances",
+          "maximum":"maximum number of instances"
+        },
+        "vnfc":[  
+          {  
+            "id":"vnfcid1",
+            "connection_point":[  
+              {  
+                "id":"connectionpointidvnfc1",
+                "vitual_link_reference":"virtual link reference",
+                "type":"virtual/physical port/nic or vpn endpoint ip"
+              },
+              {  
+                "id":"connectionpointidvnfc2",
+                "vitual_link_reference":"virtual link reference",
+                "type":"virtual/physical port/nic or vpn endpoint ip"
+              }
+            ]
+          },
+          {  
+            "id":"vnfcid2",
+            "connection_point":[  
+              {  
+                "id":"connectionpointidvnfc3",
+                "vitual_link_reference":"virtual link reference",
+                "type":"virtual/physical port/nic or vpn endpoint ip"
+              },
+              {  
+                "id":"connectionpointidvnfc4",
+                "vitual_link_reference":"virtual link reference",
+                "type":"virtual/physical port/nic or vpn endpoint ip"
+              }
+            ]
+          }
+        ],
+        "monitoring_parameters":[  
+          {  
+            "monitoring_parameter":"memory-consumption"
+          },
+          {  
+            "monitoring_parameter":"CPU-utilization"
+          },
+          {  
+            "monitoring_parameter":"bandwidth-consumption"
+          },
+          {  
+            "monitoring_parameter":"VNFC-downtime"
+          }
+        ],
+        "cpu_instruction_set_extension":"",
+        "cpu_model":"",
+        "cpu_model_specification_binding":"",
+        "cpu_min_clock_speed":"",
+        "cpu_core_reservation":"",
+        "cpu_simultaneous_multi_threading_hw_thread_specification":"",
+        "cpu_core_oversubscription_policy":"",
+        "cpu_core_and_hw_thread_allocation_topology_policy":"",
+        "cpu_last_level_cache_size":"",
+        "cpu_direct_io_access_to_cache":"",
+        "cpu_translation_look_aside_buffer_parameters":{  
+          "TLB_size":"",
+          "TLB_large_page_support":"",
+          "IOTLB_size":"",
+          "IOTLB_large_page_support":""
+        },
+        "cpu_hot_add":"",
+        "cpu_support_accelerator":"",
+        "memory_parameters":{  
+          "type":"",
+          "speed":"",
+          "channels":"",
+          "size":"",
+          "error_correction_codes":"",
+          "oversubscription_policy":"",
+          "bandwidth_required":"",
+          "large_pages_required":"",
+          "NUMA_allocation_policy":""
+        },
+        "memory_hot_add":"",
+        "platform_security_parameters":{  
+          "random_number_generation":"",
+          "measure_launch_environment":""
+        },
+        "hypervisor_parameters":{  
+          "type":"",
+          "version":"",
+          "second_level_address_translation":"",
+          "second_level_address_translation_with_large_page_support":"",
+          "second_level_address_translation_for_io":"",
+          "second_level_address_translation_for_io_with_large_page":"",
+          "support_for_interrupt_remapping":"",
+          "support_for_data_processing_acceleration_libraries":""
+        },
+        "platform_pcie_parameters":[  
+          {  
+            "type":"type of pcie device e.g. NIC",
+            "general_capabilities":"",
+            "bandwidth":"",
+            "device_pass_through":"True/False",
+            "SR-IOV":"",
+            "device_assignement_affinity":""
+          },
+          {  
+            "type:":"type of pcie device e.g. NIC",
+            "general_capabilities":"",
+            "bandwidth":"",
+            "device_pass_through":"True/False",
+            "SR-IOV":"Info rgarding SR-IOV deployment",
+            "device_assignement_affinity":""
+          }
+        ],
+        "pcie_advanced_error_reporting":"",
+        "platform_acceleration_device":"",
+        "network_interface_card_capabilities":{  
+          "LSO":"",
+          "LRO":"",
+          "checksum":"",
+          "RSS":"",
+          "flow_director":"",
+          "mirroring":"",
+          "availability":"",
+          "jumbo_support":"",
+          "VLAN_tag":"",
+          "RDMA":"",
+          "SR-IOV":""
+        },
+        "network_interface_bandwidth":"eg 1GBit",
+        "data_processing_acceleration_library":"eg DPDK v1.0",
+        "vswitch_capabilities":{  
+          "type":"ovs",
+          "version":"2.0",
+          "overlay_tunnel":"GRE"
+        },
+        "corrected_error_notification":"number of correctable errors",
+        "uncorrected_error_notification":"number of error raising exceptions",
+        "storage_requirements":{  
+          "size":"size required eg 30GB",
+          "KQI1":"IOPS limit if applicable",
+          "KQI2":""
+        },
+        "rdma_support_bandwidth":"rdma bandwidth"
+      }
+    ],
+    "virtual_link":[  
+      {  
+        "id":"vlinkid1 number",
+        "connectivity_type":"E-Line, E-LAN or E-Tree",
+        "connection_points_references":[  
+          {  
+            "id":"connection_point_id1"
+          },
+          {  
+            "id":"connection_point_id2"
+          }
+        ],
+        "root_requirement":"root bandwidth",
+        "leaf_requirement":"leaf bandwidth",
+        "qos":"qos options, eg latency, jitter",
+        "test_access":"none, passive monitoring, active monitoing"
+      },
+      {  
+        "id":"vlinkid2 number",
+        "connectivity_type":"E-Line, E-LAN or E-Tree",
+        "connection_points_references":[  
+          {  
+            "id":"connection_point_id1"
+          },
+          {  
+            "id":"connection_point_id2"
+          }
+        ],
+        "root_requirement":"root bandwidth",
+        "leaf_requirement":"leaf bandwidth",
+        "qos":"qos options, eg latency, jitter",
+        "test_access":"none, passive monitoring, active monitoing"
+      }
+    ],
+    "connection_point":[  
+      {  
+        "id":"connectionpointid1",
+        "vitual_link_reference":"virtual link reference",
+        "type":"virtual/physical port/nic or vpn endpoint ip"
+      },
+      {  
+        "id":"connectionpointid2",
+        "vitual_link_reference":"virtual link reference",
+        "type":"virtual/physical port/nic or vpn endpoint ip"
+      }
+    ],
+    "lifecycle_event":{  
+      "driver":"driver to be used for accessing the management VNFC, e.g. SSH",
+      "Authentication":"path/to/private_key",
+      "Authentication_Type":"Authentication type e.g. PrivateKey/ Digest ",
+      "VNF_Container":"path/to/container e.g. /home/tnova/container/",
+      "events":[  
+        {  
+          "lifecycle_event":"start",
+          "controller":"get_attr: [controller, floating_ip]",
+          "vdu1":"get_attr: [instance1, mngt_network_ip]",
+          "vdu2":"get_attr: [instance2, mngt_network_ip]"
+        },
+        {  
+          "lifecycle_event":"stop",
+          "controller":"get_attr: [controller, floating_ip]",
+          "vdu1":"get_attr: [instance1, mngt_network_ip]",
+          "vdu2":"get_attr: [instance2, mngt_network_ip]"
+        },
+        {  
+          "lifecycle_event":"restart",
+          "controller":"get_attr: [controller, floating_ip]",
+          "vdu1":"get_attr: [instance1, mngt_network_ip]",
+          "vdu2":"get_attr: [instance2, mngt_network_ip]"
+        },
+        {  
+          "lifecycle_event":"scale-in",
+          "controller":"get_attr: [controller, floating_ip]",
+          "vdu1":"get_attr: [instance1, mngt_network_ip]",
+          "vdu2":"get_attr: [instance2, mngt_network_ip]"
+        },
+        {  
+          "lifecycle_event":"scale-out",
+          "lifecycle_event":"restart",
+          "controller":"get_attr: [controller, floating_ip]",
+          "vdu1":"get_attr: [instance1, mngt_network_ip]",
+          "vdu2":"get_attr: [instance2, mngt_network_ip]"
+        }
+      ]
+    },
+    "dependency":[  
+      {  
+        "source_vdu":"sourcevduid",
+        "target_vdu":"targetvduid"
+      },
+      {  
+        "source_vdu":"sourcevduid",
+        "target_vdu":"targetvduid"
+      }
+    ],
+    "monitoring_parameters":[  
+      {  
+        "monitoring_parameter":"memory-consumption",
+        "description":"Maximum memory consumed by the VNF"
+      },
+      {  
+        "monitoring_parameter":"CPU-utilization",
+        "description":""
+      },
+      {  
+        "monitoring_parameter":"bandwidth-consumption",
+        "description":""
+      },
+      {  
+        "monitoring_parameter":"VNFC-downtime",
+        "description":""
+      }
+    ],
+    "deployment_flavour":[  
+      {  
+        "id":"vnfflavourid1",
+        "flavour_key":"calls5k",
+        "constraint":"specific hardware constraint",
+        "constituent_vdu":{  
+          "vdu_reference":"vduid for this deployment",
+          "number_of_instances":"number of VDU instance required",
+          "constituent_vnfc":"references vnfc id"
+        },
+        "assurance-params":[  
+          {  
+            "param-id":"memory-consumption",
+            "value":"1",
+            "unit":"MB",
+            "formula":"memory-consumption LT 1",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              },
+              {  
+                "breaches_count":5,
+                "interval":120
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":5,
+              "unit":"%",
+              "validity":"P1D"
+            }
+          },
+          {  
+            "param-id":"CPU-utilization",
+            "value":"70",
+            "unit":"percentage",
+            "formula":"CPU-utilization GT 70",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":5,
+              "unit":"%",
+              "validity":"P1D"
+            }
+          }
+        ]
+      },
+      {  
+        "id":"vnfflavourid2",
+        "flavour_key":"calls10k",
+        "constraint":"specific hardware constraint",
+        "constituent_vdu":{  
+          "vdu_reference":"vduid for this deployment",
+          "number_of_instances":"number of VDU instance required",
+          "constituent_vnfc":"references vnfc id"
+        },
+        "assurance-params":[  
+          {  
+            "param-id":"memory-consumption",
+            "value":1.5,
+            "unit":"MB",
+            "formula":"memory-consumption LT 1.5",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              },
+              {  
+                "breaches_count":5,
+                "interval":120
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":0.05,
+              "unit":"percentage",
+              "validity":"P1D"
+            }
+          },
+          {  
+            "param-id":"CPU-utilization",
+            "value":0.8,
+            "unit":"percentage",
+            "formula":"CPU-utilization LT 0.8",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":0.05,
+              "unit":"percentage",
+              "validity":"P1D"
+            }
+          }
+        ]
+      },
+      {  
+        "id":"vnfflavourid1",
+        "flavour_key":"users50k",
+        "constraint":"specific hardware constraint",
+        "constituent_vdu":{  
+          "vdu_reference":"vduid for this deployment",
+          "number_of_instances":"number of VDU instance required",
+          "constituent_vnfc":"references vnfc id"
+        },
+        "assurance-params":[  
+          {  
+            "param-id":"memory-consumption",
+            "value":1,
+            "unit":"MB",
+            "formula":"memory-consumption LT 1",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              },
+              {  
+                "breaches_count":5,
+                "interval":120
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":0.05,
+              "unit":"percentage",
+              "validity":"P1D"
+            }
+          },
+          {  
+            "param-id":"CPU-utilization",
+            "value":0.85,
+            "unit":"percentage",
+            "formula":"CPU-utilization LT 0.85",
+            "violation":[  
+              {  
+                "breaches_count":2,
+                "interval":30
+              }
+            ],
+            "penalty":{  
+              "type":"discount",
+              "value":0.05,
+              "unit":"percentage",
+              "validity":"P1D"
+            }
+          }
+        ]
+      }
+    ],
+    "auto_scale_policy":[  
+      {  
+        "criteria_parameter":{  
+          "type":"monitoring parameter name",
+          "threshold":"threshold"
+        },
+        "action_type":"scale-out to different flavour ID"
+      },
+      {  
+        "criteria_parameter":{  
+          "monitoring_parameter":"monitoring parameter name",
+          "threshold":"threshold"
+        },
+        "action_type":"scale-out to different flavour ID"
+      }
+    ],
+    "manifest_file":"path/to/file",
+    "manifest_file_security":"manifest file md5 hash"
+  }
+}

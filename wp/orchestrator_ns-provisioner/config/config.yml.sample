@@ -1,0 +1,25 @@
+---
+manager: http://127.0.0.1:4000
+servicename: ns-provisioner
+environment: production
+address: 0.0.0.0
+port: 4012
+max_conns: 1024
+timeout: 30
+max_persistent_conns: 512
+daemonize: false
+logstash_host: 127.0.0.1
+logstash_port: 9999
+
+ns_catalogue: http://localhost:4011
+ns_instance_repository: http://localhost:4013
+ns_monitoring: http://localhost:4014
+ns_mapping: http://localhost:4042
+
+vnf_manager: http://193.136.92.205:4567
+
+vim_identity_manager: http://localhost
+vim_user: admin
+vim_pass: nomoresecrete
+
+services_list: http://apis.t-nova.eu/orchestrator/config/services

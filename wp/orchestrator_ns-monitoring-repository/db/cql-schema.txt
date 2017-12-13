@@ -1,0 +1,11 @@
+
+use tnova_monitoring;
+
+CREATE TABLE nsmonitoring2 (
+    instanceId text,
+    date int,
+    metricName text,
+    value text,
+    primary key(instanceId, metricName, date)
+) WITH CLUSTERING ORDER BY (metricName DESC, date DESC);
+

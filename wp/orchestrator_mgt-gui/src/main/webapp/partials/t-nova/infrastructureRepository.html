@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="page-header">Infrastructure Repository
+            <small>Resource Overview</small>
+        </h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-1">
+                <abn-tree on-select="my_tree_handler(branch)" tree-data="tree"></abn-tree>
+                <button ng-click="generateGraph()" class="btn btn-info btn-xs">Display entire graph</button>
+            </div>
+            <div ng-show="showPop">
+                <div class="col-lg-9 col-md-9">
+                    <topology-simple class="col-md-10 col-lg-offset-1" topology-data="topologyData"></topology-simple>
+                </div>
+            </div>
+            <div ng-show="showTopology">
+                <div class="col-lg-9 col-md-9">
+                    <topology-complete class="col-md-10 col-lg-offset-1" complete-topology-data="completeTopologyData"></topology-complete>
+                </div>
+                <div class="btn-group" ng-repeat="layer in selectedLayer" >
+                    <label class="btn btn-default" ng-click="filter('virtual')">
+                        <input type="checkbox" ng-model="layer.isChecked" />
+                        <span>{{layer.name}}</span>
+                    </label>
+                </div>
+            </div>
+            <div ng-show="showLayers">
+                <div class="col-lg-9 col-md-9">
+                    <layers bind="rootElement"></layers>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

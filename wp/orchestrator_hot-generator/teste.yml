@@ -1,0 +1,15 @@
+---
+heat_template_version: '2014-10-16'
+description: description of the function of the VNF
+resources:
+  VTC_0:
+    type: OS::Nova::Flavor
+    properties:
+      disk: size required eg 30GB
+      ram: virtual memory needed eg 10M
+      vcpus: number of virtual cpus
+  VTC_1:
+    type: OS::Nova::Server
+    properties:
+      flavor:  {get_resource: VTC_0} 
+      image: image reference uri

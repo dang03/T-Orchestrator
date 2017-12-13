@@ -1,0 +1,37 @@
+# PREFERENCE DATASET
+# This dataset contains varibles and parameters which are not strictly related to 
+# NI or NS requirements / constraints, but they set the solver behavior as specified by
+# user requirements (i.e. fixed geographical location of PoP) or NI status (i.e. 
+# aggregating all the VNF into one single PoP, instead of spreading them in 
+# different locations)
+
+data;
+
+# Weight of the objective function
+# alpha: by increasing alpha, the solver optimizes the allocation of the VNFs by keeping
+# the allocation cost at minimum
+# beta: by increasing beta, the solver optimizes the allocation of VNFs so that the 
+# aggregate delay is at minimum
+# gamma: by increasing gamma, the solver optimizes the allocation of VNFs by maximizing the
+# aggregation of VNF per PoP (negative values of gamma actually increase the spreading)
+param alpha := 0.0;
+param beta := 0.0;
+param gamma := -1.0;
+
+# Binary value for manually assign a VNF to a certain PoP
+param:		bound :=
+0 0    0
+1 0    0
+2 0    0
+0 1    0
+1 1    0
+2 1    0
+0 2    0
+1 2    0
+2 2    0
+0 3    0
+1 3    0
+2 3    0
+;
+
+end;

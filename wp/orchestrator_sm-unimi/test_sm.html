@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#sendreq").click(function() {
+			$.ajax({
+				url: "http://localhost:4042/vnsd",
+				type: "POST",
+				data: JSON.stringify( {"NS_id": $('#NSid_box').val()} ),
+				dataType: "json",
+				success: function(result) {$("#risult").html( JSON.stringify(result) );
+										   $("#status").html( "Success" );},
+				error:   function(result) {$("#risult").html( JSON.stringify(result) );
+										   $("#status").html( "Error" );},
+			});
+		});
+	});
+	</script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#postreq").click(function() {
+			$.post(	"http://localhost:4042/vnsd",
+					JSON.stringify( {"NS_id": $('#NSid_box').val()} ),
+					function(data, status) {$("#risult").html( JSON.stringify(data) );
+											$("#status").html( JSON.stringify(status) );},
+					"json");
+		});
+	});
+	</script>
+	
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#get_ns").click(function() {
+			$.get(	"http://apis.t-nova.eu/orchestrator/network-services/2",
+					function(data, status) {$("#risult").html( JSON.stringify(data) );
+											$("#status").html( JSON.stringify(status) );},
+					"json");
+		});
+	});
+	</script>
+</head>
+	
+<body>
+	<p>
+		I am the Orchestrator
+	</p>
+	<br>
+	<div class="sameline" >
+		Post a request to the Service Mapper: {"NS_id": "
+		<form style="display:inline-block" method="POST" action="">
+			<input id="NSid_box" type="text" value="NS-1" />
+		</form>
+		"}
+		<br>
+	</div>
+	
+	<p>	
+		<form method="POST" action="">
+			<input type="button" value="send NS request(ajax)" name="invia NS2" id="sendreq"><br>
+			<input type="button" value="send NS request(post)" name="invia NS3" id="postreq"><BR>
+			<BR>
+			<input type="button" value="GET to NS-catalogue" name="invia NS3" id="get_ns" disabled><BR>
+		</form>
+		<br><br><br>
+		<form>
+			Returned value:<br> <br>
+			STATUS :<div id="status"> -- </div>
+			MAPPER RESPONSE: <div id="risult"> -- </div>
+		</form>
+	</p>
+</body>
+</html>

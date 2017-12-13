@@ -1,0 +1,81 @@
+{
+    "nsd": {
+        "ns_id": "1",
+        "name": "NS name",
+        "description": "eUCNC Demo",
+        "vendor": "",
+        "version": "1.0",
+        "vnfs": [
+            "1",
+            "23"
+        ],
+        "vnffgd": [
+            "management-fgd",
+            "data-fgd"
+        ],
+        "vld": [
+            "vld-1",
+            "vld-2"
+        ],
+        "lifecycle_events": [{
+            "initialization": "URI for the initialization script"
+        }, {
+            "termination": "URI for the termination script"
+        }, {
+            "scaling": "URI for the scaling script"
+        }],
+        "vnf_dependencies": [
+            "23",
+            "1"
+        ],
+        "monitoring_parameters": [{
+            "name": "availability",
+            "description": "Percentage of time the NS has been available over the last 365 days",
+            "unit": "%"
+        }, {
+            "name": "ram-consumption",
+            "description": "Amount of RAM memory consumed by the service",
+            "unit": "MB"
+        }],
+        "service_deployment_flavour": [{
+            "name": "gold",
+            "assurance_parameters": [{
+                "name": "availability",
+                "value": "GT(min(vnfs[1].availability, vnfs[2].availability))",
+                "formula": "min(vnfs[1].availability, vnfs[2].availability)",
+                "threshold": 0.95,
+                "violation": [{
+                    "breaches_count": 5,
+                    "interval": 120,
+                    "penalty": "not included, as they're not relevant to the Orchestrator"
+                }]
+            }, {
+                "name": "ram-consumption",
+                "value": "LT(add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100))",
+                "formula": "add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100)",
+                "threshold": 0.95,
+                "violation": [{
+                    "breaches_count": 5,
+                    "interval": 120,
+                    "penalty": "not included, as they're not relevant to the Orchrstrator"
+                }, {
+                    "breaches_count": 10,
+                    "interval": 300,
+                    "penalty": "not included, as they're not relevant to the Orchrstrator"
+                }]
+            }]
+        }],
+        "auto_scale_policies": [],
+        "connection_points": [
+            "X1": {
+                "name": "ingress",
+                "type": "phy.sw.port"
+            },
+            "X2": {
+                "name": "egress",
+                "type": "phy.sw.port"
+            },
+
+        ]
+    }
+}

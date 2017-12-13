@@ -1,0 +1,18 @@
+orchestrator: bundle exec rake start
+#logger: sleep 6; sh -c 'cd default/logger && exec rake start'
+#monitoring: sleep 6; sh -c 'cd default/monitoring && exec rake start'
+
+#Networservice related
+ns_catalogue: sleep 6; sh -c 'cd ../orchestrator_ns-catalogue && exec rake start'
+ns_inst_repo: sleep 6; sh -c 'cd ../orchestrator_ns-instance-repository && exec rake start'
+ns_provisioner: sleep 6; sh -c 'cd ../orchestrator_ns-provisioner && exec rake start'
+nsd_validator: sleep 6; sh -c 'cd ../orchestrator_nsd-validator && exec rake start'
+#ns_monitoring: sleep 6; sh -c 'cd ../orchestrator_ns-monitoring && exec rake start'
+
+#ns_mapping: sleep 6; sh -c 'cd ../orchestrator_sm-unimi && exec rake start'
+
+#VNF related
+#vnf_catalogue: sleep 6; sh -c 'cd ../orchestrator_vnf-catalogue && exec rake start'
+#vnf_inst_repo: sleep 6; sh -c 'cd ../orchestrator_vnf-instance-repository && exec rake start'
+#vnf_provisioner: sleep 6; sh -c 'cd ../orchestrator_vnf-provisioning && exec rake start'
+#vnfd_validator: sleep 6; sh -c 'cd ../orchestrator_vnfd-validator && exec rake start'

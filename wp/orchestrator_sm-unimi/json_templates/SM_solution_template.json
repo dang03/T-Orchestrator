@@ -1,0 +1,10 @@
+{
+"id":"123",
+"NS_id":"NS-1",
+"requirements": "[ ... ]",
+"resources": "[ ... ]",
+"mappings": "",
+"connection-graph": "",
+"created_at":"2014-11-21T14:18:09Z",
+"updated_at":"2014-11-21T14:18:09Z"
+}

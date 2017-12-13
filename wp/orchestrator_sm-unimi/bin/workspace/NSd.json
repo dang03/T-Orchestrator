@@ -1,0 +1,60 @@
+{
+  "ns_id": "TestN",
+  "vendor": "Vendor1",
+  "version": "1.0",
+  "published_to_customers": false,
+  "vnfs": [
+    "vnf1",
+    "vnf"
+  ],
+  "availability": false,
+  "service_deployment_flavour": [
+    {
+      "flavour_key": "flv_key1",
+      "constituent_vnf": [
+        {
+          "vnf_reference": "1",
+          "vnf_flavour_id_reference": "",
+          "redundancy_model": "",
+          "affinity": "",
+          "capability": "",
+          "number_of_instances": ""
+        }
+      ]
+    }
+  ],
+  "monitoring_parameters": [
+    {
+      "name": "mon1",
+      "description": "",
+      "definition": ""
+    },
+    {
+      "name": "mon2",
+      "description": "",
+      "definition": ""
+    }
+  ],
+  "connection_points": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "2"
+    }
+  ],
+  "sla_specification": [
+    {
+      "sla_id": "1",
+      "assurance_parameters": [
+        {
+          "limit": "",
+          "value": "",
+          "unit": "",
+          "violation": "",
+          "penalty": ""
+        }
+      ]
+    }
+  ]
+}

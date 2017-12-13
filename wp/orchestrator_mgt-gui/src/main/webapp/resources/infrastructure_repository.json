@@ -1,0 +1,2183 @@
+{
+   "nodes":{
+      "7999":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Machine_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"OSRelease\": \"3.13.0-45-generic\", \"DMIProductName\": \"VirtualBox\", \"cpuset\": \"0x00000007\", \"DMIBoardAssetTag\": \"\", \"online_cpuset\": \"0x00000007\", \"DMIChassisVersion\": \"\", \"Architecture\": \"x86_64\", \"DMIBoardName\": \"VirtualBox\", \"DMIChassisVendor\": \"Oracle Corporation\", \"DMIBIOSVendor\": \"innotek GmbH\", \"DMIBoardVendor\": \"Oracle Corporation\", \"OSVersion\": \"#74-Ubuntu SMP Tue Jan 13 19:36:28 UTC 2015\", \"DMIBIOSDate\": \"12/01/2006\", \"DMIBIOSVersion\": \"VirtualBox\", \"complete_cpuset\": \"0x00000007\", \"HostName\": \"controller\", \"DMIChassisAssetTag\": \"\", \"OSName\": \"Linux\", \"DMISysVendor\": \"innotek GmbH\", \"DMIBoardVersion\": \"1.2\", \"allowed_cpuset\": \"0x00000007\", \"os_index\": \"0\", \"DMIChassisType\": \"1\", \"local_memory\": \"6132330496\", \"DMIProductVersion\": \"1.2\", \"Backend\": \"Linux\"}",
+         "type":"Machine",
+         "pop":"Demokritos Datacenter"
+      },
+      "7388":{
+         "allocation":"controller",
+         "openstack_uuid":"57ae6ae54f154907a63bca3d48847bb3",
+         "layer":"service",
+         "attributes":"{\"endpoints\": {\"admin\": \"http://10.1.100.6:9696/\", \"internal\": \"http://10.1.100.6:9696/\", \"public\": \"http://10.1.100.6:9696/\"}, \"extra\": {\"name\": \"neutron\", \"description\": \"Neutron Service\"}}",
+         "timestamp":1424777630.410861,
+         "type":"neutron",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7389":{
+         "allocation":"controller",
+         "openstack_uuid":"3764a1c85dcf40bf833f3b350d28a2c2",
+         "layer":"service",
+         "attributes":"{\"endpoints\": {\"admin\": \"http://10.1.100.6:8774/v2/$(tenant_id)s\", \"internal\": \"http://10.1.100.6:8774/v2/$(tenant_id)s\", \"public\": \"http://10.1.100.6:8774/v2/$(tenant_id)s\"}, \"extra\": {\"name\": \"nova\", \"description\": \"Nova Compute Service\"}}",
+         "timestamp":1424777630.410861,
+         "type":"nova",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7387":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Machine_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"OSRelease\": \"3.13.0-45-generic\", \"DMIProductName\": \"VirtualBox\", \"cpuset\": \"0x00000007\", \"DMIBoardAssetTag\": \"\", \"online_cpuset\": \"0x00000007\", \"DMIChassisVersion\": \"\", \"Architecture\": \"x86_64\", \"DMIBoardName\": \"VirtualBox\", \"DMIChassisVendor\": \"Oracle Corporation\", \"DMIBIOSVendor\": \"innotek GmbH\", \"DMIBoardVendor\": \"Oracle Corporation\", \"OSVersion\": \"#74-Ubuntu SMP Tue Jan 13 19:36:28 UTC 2015\", \"DMIBIOSDate\": \"12/01/2006\", \"DMIBIOSVersion\": \"VirtualBox\", \"complete_cpuset\": \"0x00000007\", \"HostName\": \"controller\", \"DMIChassisAssetTag\": \"\", \"OSName\": \"Linux\", \"DMISysVendor\": \"innotek GmbH\", \"DMIBoardVersion\": \"1.2\", \"allowed_cpuset\": \"0x00000007\", \"os_index\": \"0\", \"DMIChassisType\": \"1\", \"local_memory\": \"6132330496\", \"DMIProductVersion\": \"1.2\", \"Backend\": \"Linux\"}",
+         "type":"Machine",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7456":{
+         "allocation":"controller",
+         "openstack_uuid":"3",
+         "layer":"virtual",
+         "name":"m1.medium",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 40, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 4096, \"vcpus\": 2, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7457":{
+         "allocation":"controller",
+         "openstack_uuid":"2",
+         "layer":"virtual",
+         "name":"m1.small",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 20, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 2048, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7454":{
+         "allocation":"controller",
+         "openstack_uuid":"451",
+         "layer":"virtual",
+         "name":"m1.heat",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 0, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 512, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7455":{
+         "allocation":"controller",
+         "openstack_uuid":"1",
+         "layer":"virtual",
+         "name":"m1.tiny",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 1, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 512, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7452":{
+         "allocation":"compute",
+         "openstack_uuid":"4a67a69b-7c78-4b89-956e-3cfe04c93375",
+         "layer":"virtual",
+         "name":"Forwarding",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"vm_state\": \"stopped\", \"internal_id\": null, \"availability_zone\": null, \"ramdisk_id\": \"76b3a911-224c-494c-be9b-ffbf62fb20a4\", \"instance_type_id\": \"42\", \"cleaned\": 0, \"vm_mode\": null, \"reservation_id\": \"r-z9h3k1ua\", \"disable_terminate\": 0, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"default_swap_device\": null, \"hostname\": \"forwarding\", \"launched_on\": \"compute\", \"display_description\": \"Forwarding\", \"key_data\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq1m9MvT5EopiToIT/LDp3GLcxBT8Yj1x++K+Q9/Cd87Huqi95rZpUjMa8JyoN0174DKmXLXYvDGLO1Mj5bNGlYTsCVJm00/CLrBrHgASWNRhaCXjHgQ7nuTY1DmS+IMC2bAgJt4vUwpxYh1Jehcl/BFFycMgh2MuGQbPmOlaG40wyPT9jlqWJkTG/+p5iy+8rxdCuHSw9escMKgVKZiOtN8Zc0WYdiSXL30qKIP+NfpFnq+PLDrXXZQstI/vjo/8385SiKr3etpYSbtTfSKYQtbCI2XH8Yd+zlfmbkpewJjHVtr4iEQUboREvboH1ntG1HtCQpmIfOfMimksZEggr Generated-by-Nova\\n\", \"power_state\": 4, \"default_ephemeral_device\": null, \"progress\": 0, \"project_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"root_device_name\": \"/dev/vda\", \"node\": \"compute\", \"ephemeral_gb\": 0, \"access_ip_v6\": null, \"access_ip_v4\": null, \"kernel_id\": \"51004178-7163-4f2d-bf70-50b6251ff75d\", \"key_name\": \"test\", \"image_id\": \"e85acf3a-f083-437a-8dd4-ce4efefc2ea2\", \"host\": \"compute\", \"ephemeral_key_uuid\": null, \"task_state\": null, \"shutdown_terminate\": 0, \"cell_name\": null, \"root_gb\": 0, \"locked\": 0, \"locked_by\": null, \"launch_index\": 0, \"memory_mb\": 64, \"vcpus\": 1, \"architecture\": null, \"auto_disk_config\": 0, \"os_type\": null, \"config_drive\": \"\", \"ports\": [\"8aa420d0-8f53-491b-ba96-a8a9c0c8881c\", \"b5524eb8-5b73-4bc8-a738-21d3d8b8fa52\", \"f982fb40-895d-4961-a9a7-a7ebdbbc838d\"]}",
+         "type":"vm",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7453":{
+         "allocation":"controller",
+         "openstack_uuid":"1bef905d-ae2d-4e34-9be8-aeb24c9d3669",
+         "layer":"virtual",
+         "name":"m3.tiny",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 20, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 512, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7450":{
+         "allocation":"controller",
+         "openstack_uuid":"42",
+         "layer":"virtual",
+         "name":"m1.nano",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 0, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 64, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7451":{
+         "allocation":"compute",
+         "openstack_uuid":"98bbedd9-68a8-450d-9837-547eca390560",
+         "layer":"virtual",
+         "name":"Inspection",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"vm_state\": \"stopped\", \"internal_id\": null, \"availability_zone\": null, \"ramdisk_id\": \"\", \"instance_type_id\": \"f335817f-750f-4d14-8d78-a3851a8702cd\", \"cleaned\": 0, \"vm_mode\": null, \"reservation_id\": \"r-kdty3g81\", \"disable_terminate\": 0, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"default_swap_device\": null, \"hostname\": \"inspection\", \"launched_on\": \"compute\", \"display_description\": \"Inspection\", \"key_data\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq1m9MvT5EopiToIT/LDp3GLcxBT8Yj1x++K+Q9/Cd87Huqi95rZpUjMa8JyoN0174DKmXLXYvDGLO1Mj5bNGlYTsCVJm00/CLrBrHgASWNRhaCXjHgQ7nuTY1DmS+IMC2bAgJt4vUwpxYh1Jehcl/BFFycMgh2MuGQbPmOlaG40wyPT9jlqWJkTG/+p5iy+8rxdCuHSw9escMKgVKZiOtN8Zc0WYdiSXL30qKIP+NfpFnq+PLDrXXZQstI/vjo/8385SiKr3etpYSbtTfSKYQtbCI2XH8Yd+zlfmbkpewJjHVtr4iEQUboREvboH1ntG1HtCQpmIfOfMimksZEggr Generated-by-Nova\\n\", \"power_state\": 4, \"default_ephemeral_device\": null, \"progress\": 0, \"project_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"root_device_name\": \"/dev/vda\", \"node\": \"compute\", \"ephemeral_gb\": 0, \"access_ip_v6\": null, \"access_ip_v4\": null, \"kernel_id\": \"\", \"key_name\": \"test\", \"image_id\": \"29af55d7-6b83-4c24-859e-dc1539c49ccf\", \"host\": \"compute\", \"ephemeral_key_uuid\": null, \"task_state\": null, \"shutdown_terminate\": 0, \"cell_name\": null, \"root_gb\": 20, \"locked\": 0, \"locked_by\": null, \"launch_index\": 0, \"memory_mb\": 512, \"vcpus\": 1, \"architecture\": null, \"auto_disk_config\": 0, \"os_type\": null, \"config_drive\": \"\", \"ports\": [\"1791feb4-a220-4354-8335-12f3d23a104c\", \"c059528c-7b00-49b2-b9d1-837867aab249\"]}",
+         "type":"vm",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7458":{
+         "allocation":"controller",
+         "openstack_uuid":"5",
+         "layer":"virtual",
+         "name":"m1.xlarge",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 160, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 16384, \"vcpus\": 8, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7459":{
+         "allocation":"controller",
+         "openstack_uuid":"4",
+         "layer":"virtual",
+         "name":"m1.large",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 80, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 8192, \"vcpus\": 4, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7395":{
+         "category":"network",
+         "openstack_uuid":"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb",
+         "layer":"service",
+         "name":"Open vSwitch agent",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"controller",
+         "attributes":"{\"configurations\": {\"arp_responder_enabled\": false, \"tunneling_ip\": \"10.1.100.6\", \"devices\": 4, \"l2_population\": false, \"tunnel_types\": [\"vxlan\"], \"enable_distributed_routing\": false, \"bridge_mappings\": {\"intnet\": \"br-eth1\"}}, \"admin_state_up\": 1}",
+         "type":"neutron-openvswitch-agent"
+      },
+      "7394":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Machine_0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"OSRelease\": \"3.13.0-45-generic\", \"DMIProductName\": \"VirtualBox\", \"cpuset\": \"0x0000000f\", \"DMIBoardAssetTag\": \"\", \"online_cpuset\": \"0x0000000f\", \"DMIChassisVersion\": \"\", \"Architecture\": \"x86_64\", \"LinuxCgroup\": \"/\", \"DMIBoardName\": \"VirtualBox\", \"DMIChassisVendor\": \"Oracle Corporation\", \"DMIBIOSVendor\": \"innotek GmbH\", \"DMIBoardVendor\": \"Oracle Corporation\", \"OSVersion\": \"#74-Ubuntu SMP Tue Jan 13 19:36:28 UTC 2015\", \"DMIBIOSDate\": \"12/01/2006\", \"DMIBIOSVersion\": \"VirtualBox\", \"complete_cpuset\": \"0x0000000f\", \"HostName\": \"compute\", \"DMIChassisAssetTag\": \"\", \"OSName\": \"Linux\", \"DMISysVendor\": \"innotek GmbH\", \"DMIBoardVersion\": \"1.2\", \"allowed_cpuset\": \"0x0000000f\", \"os_index\": \"0\", \"DMIChassisType\": \"1\", \"local_memory\": \"8373014528\", \"DMIProductVersion\": \"1.2\", \"Backend\": \"Linux\"}",
+         "type":"Machine",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7397":{
+         "category":"network",
+         "openstack_uuid":"9dc676ae-23fe-4200-a751-d6296aaee87a",
+         "layer":"service",
+         "name":"DHCP agent",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"controller",
+         "attributes":"{\"configurations\": {\"subnets\": 2, \"use_namespaces\": true, \"dhcp_lease_duration\": 86400, \"dhcp_driver\": \"neutron.agent.linux.dhcp.Dnsmasq\", \"networks\": 2, \"ports\": 14}, \"admin_state_up\": 1}",
+         "type":"neutron-dhcp-agent"
+      },
+      "7396":{
+         "category":"network",
+         "openstack_uuid":"62f6ae5d-69b8-479d-8fa0-e369eeb71444",
+         "layer":"service",
+         "name":"Metadata agent",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"controller",
+         "attributes":"{\"configurations\": {\"nova_metadata_port\": 8775, \"nova_metadata_ip\": \"10.1.100.6\", \"metadata_proxy_socket\": \"/opt/stack/data/neutron/metadata_proxy\"}, \"admin_state_up\": 1}",
+         "type":"neutron-metadata-agent"
+      },
+      "7391":{
+         "allocation":"controller",
+         "openstack_uuid":"5d005d371cfe4789bd6c854fd693c657",
+         "layer":"service",
+         "attributes":"{\"endpoints\": {\"admin\": \"http://10.1.100.6:8004/v1/$(tenant_id)s\", \"internal\": \"http://10.1.100.6:8004/v1/$(tenant_id)s\", \"public\": \"http://10.1.100.6:8004/v1/$(tenant_id)s\"}, \"extra\": {\"name\": \"heat\", \"description\": \"Heat Orchestration Service\"}}",
+         "timestamp":1424777630.410861,
+         "type":"heat",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7390":{
+         "allocation":"controller",
+         "openstack_uuid":"3738bce5fa124de4bb6552bb313a87f3",
+         "layer":"service",
+         "attributes":"{\"endpoints\": {\"admin\": \"http://10.1.100.6:8776/v1/$(tenant_id)s\", \"internal\": \"http://10.1.100.6:8776/v1/$(tenant_id)s\", \"public\": \"http://10.1.100.6:8776/v1/$(tenant_id)s\"}, \"extra\": {\"name\": \"cinder\", \"description\": \"Cinder Volume Service\"}}",
+         "timestamp":1424777630.410861,
+         "type":"cinder",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7393":{
+         "category":"network",
+         "openstack_uuid":"44142f35-3c6f-4c2f-a432-ed5f75d3a826",
+         "layer":"service",
+         "name":"Open vSwitch agent",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"configurations\": {\"arp_responder_enabled\": false, \"tunneling_ip\": \"10.1.100.7\", \"devices\": 10, \"l2_population\": false, \"tunnel_types\": [\"vxlan\"], \"enable_distributed_routing\": false, \"bridge_mappings\": {\"intnet\": \"br-eth1\"}}, \"admin_state_up\": 1}",
+         "type":"neutron-openvswitch-agent"
+      },
+      "7392":{
+         "allocation":"controller",
+         "openstack_uuid":"6306b4bd9e5447559018f707ea6fa081",
+         "layer":"service",
+         "attributes":"{\"endpoints\": {\"admin\": \"http://10.1.100.6:9292\", \"internal\": \"http://10.1.100.6:9292\", \"public\": \"http://10.1.100.6:9292\"}, \"extra\": {\"name\": \"glance\", \"description\": \"Glance Image Service\"}}",
+         "timestamp":1424777630.410861,
+         "type":"glance",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7399":{
+         "openstack_uuid":"f723a700-f023-4c39-beb9-ce98fffbc3f7",
+         "category":"network",
+         "layer":"virtual",
+         "name":"dpi_private_network",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"admin_state_up\": 1, \"segmentation_id\": 1001, \"is_dynamic\": 0, \"physical_network\": null, \"dhcp_agent_id\": \"9dc676ae-23fe-4200-a751-d6296aaee87a\", \"shared\": 0, \"network_type\": \"vxlan\"}",
+         "type":"net",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7398":{
+         "category":"network",
+         "openstack_uuid":"2d9c7cf6-d856-4d25-9b81-2b64ae4ab0d9",
+         "layer":"service",
+         "name":"L3 agent",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"controller",
+         "attributes":"{\"configurations\": {\"router_id\": \"\", \"agent_mode\": \"legacy\", \"gateway_external_network_id\": \"\", \"handle_internal_only_routers\": true, \"use_namespaces\": true, \"routers\": 2, \"interfaces\": 2, \"floating_ips\": 6, \"interface_driver\": \"neutron.agent.linux.interface.OVSInterfaceDriver\", \"external_network_bridge\": \"br-ex\", \"ex_gw_ports\": 2}, \"admin_state_up\": 1}",
+         "type":"neutron-l3-agent"
+      },
+      "7441":{
+         "allocation":"controller",
+         "openstack_uuid":"nova-service-2",
+         "layer":"service",
+         "name":"nova-cert",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"topic\": \"cert\", \"disabled\": 0, \"disabled_reason\": null, \"report_count\": 101252}",
+         "type":"nova-cert",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7440":{
+         "allocation":"controller",
+         "openstack_uuid":"nova-service-1",
+         "layer":"service",
+         "name":"nova-conductor",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"topic\": \"conductor\", \"disabled\": 0, \"disabled_reason\": null, \"report_count\": 100543}",
+         "type":"nova-conductor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7443":{
+         "allocation":"controller",
+         "openstack_uuid":"nova-service-3",
+         "layer":"service",
+         "name":"nova-scheduler",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"topic\": \"scheduler\", \"disabled\": 0, \"disabled_reason\": null, \"report_count\": 101255}",
+         "type":"nova-scheduler",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7445":{
+         "allocation":"compute",
+         "openstack_uuid":"nova-service-5",
+         "layer":"service",
+         "name":"nova-compute",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"topic\": \"compute\", \"disabled\": 0, \"disabled_reason\": null, \"report_count\": 100127}",
+         "type":"nova-compute",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7444":{
+         "allocation":"controller",
+         "openstack_uuid":"nova-service-4",
+         "layer":"service",
+         "name":"nova-consoleauth",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"topic\": \"consoleauth\", \"disabled\": 0, \"disabled_reason\": null, \"report_count\": 101250}",
+         "type":"nova-consoleauth",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7447":{
+         "allocation":"compute",
+         "openstack_uuid":"69bf56c2-2549-41d3-997b-ff4d5b2d64aa",
+         "layer":"virtual",
+         "name":"Forwarding",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"vm_state\": \"stopped\", \"internal_id\": null, \"availability_zone\": null, \"ramdisk_id\": \"\", \"instance_type_id\": \"f335817f-750f-4d14-8d78-a3851a8702cd\", \"cleaned\": 0, \"vm_mode\": null, \"reservation_id\": \"r-tub0yxvd\", \"disable_terminate\": 0, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"default_swap_device\": null, \"hostname\": \"forwarding\", \"launched_on\": \"compute\", \"display_description\": \"Forwarding\", \"key_data\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq1m9MvT5EopiToIT/LDp3GLcxBT8Yj1x++K+Q9/Cd87Huqi95rZpUjMa8JyoN0174DKmXLXYvDGLO1Mj5bNGlYTsCVJm00/CLrBrHgASWNRhaCXjHgQ7nuTY1DmS+IMC2bAgJt4vUwpxYh1Jehcl/BFFycMgh2MuGQbPmOlaG40wyPT9jlqWJkTG/+p5iy+8rxdCuHSw9escMKgVKZiOtN8Zc0WYdiSXL30qKIP+NfpFnq+PLDrXXZQstI/vjo/8385SiKr3etpYSbtTfSKYQtbCI2XH8Yd+zlfmbkpewJjHVtr4iEQUboREvboH1ntG1HtCQpmIfOfMimksZEggr Generated-by-Nova\\n\", \"power_state\": 4, \"default_ephemeral_device\": null, \"progress\": 0, \"project_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"root_device_name\": \"/dev/vda\", \"node\": \"compute\", \"ephemeral_gb\": 0, \"access_ip_v6\": null, \"access_ip_v4\": null, \"kernel_id\": \"\", \"key_name\": \"test\", \"image_id\": \"29af55d7-6b83-4c24-859e-dc1539c49ccf\", \"host\": \"compute\", \"ephemeral_key_uuid\": null, \"task_state\": null, \"shutdown_terminate\": 0, \"cell_name\": null, \"root_gb\": 20, \"locked\": 0, \"locked_by\": null, \"launch_index\": 0, \"memory_mb\": 512, \"vcpus\": 1, \"architecture\": null, \"auto_disk_config\": 0, \"os_type\": null, \"config_drive\": \"\", \"ports\": [\"cb4406d1-fa72-486a-bd47-e293bb7c7189\", \"f7d1d787-b9b0-4a95-93bc-02ed7692570e\", \"06853533-04f6-4ccc-b430-e72f01a05d4b\"]}",
+         "type":"vm",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7446":{
+         "allocation":"compute",
+         "openstack_uuid":"hypervisor-1",
+         "layer":"service",
+         "name":"QEMU_compute",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"current_workload\": 0, \"stats\": {\"num_task_None\": 4, \"num_proj_7f6ad8cc6f61454c921ba8ab1c3f532b\": 4, \"io_workload\": 0, \"num_instances\": 4, \"num_vm_stopped\": 4, \"num_os_type_None\": 4}, \"pci_stats\": [{\"count\": 1, \"vendor_id\": \"80ee\", \"product_id\": \"beef\"}], \"vcpus_used\": 4, \"supported_instances\": [[\"i686\", \"qemu\", \"hvm\"], [\"x86_64\", \"qemu\", \"hvm\"]], \"hypervisor_type\": \"QEMU\", \"local_gb_used\": 40, \"host_ip\": \"10.1.100.7\", \"numa_topology\": {\"cells\": [{\"mem\": {\"total\": 7985, \"used\": 0}, \"cpu_usage\": 0, \"cpus\": \"0,1,2,3\", \"id\": 0}]}, \"memory_mb\": 7985, \"cpu_info\": {\"arch\": \"x86_64\", \"model\": \"Conroe\", \"vendor\": \"Intel\", \"features\": [\"pge\", \"clflush\", \"sep\", \"syscall\", \"vme\", \"tsc\", \"cmov\", \"fpu\", \"pat\", \"lm\", \"msr\", \"nx\", \"fxsr\", \"pae\", \"mmx\", \"cx8\", \"mce\", \"de\", \"ht\", \"pse\", \"pni\", \"mca\", \"apic\", \"sse\", \"lahf_lm\", \"rdtscp\", \"sse2\", \"ssse3\", \"pse36\", \"mtrr\"], \"topology\": {\"cores\": 4, \"threads\": 1, \"sockets\": 1}}, \"vcpus\": 4, \"running_vms\": 4, \"free_disk_gb\": 156, \"disk_available_least\": 179, \"hypervisor_version\": 2000000, \"service_id\": 5, \"local_gb\": 196, \"free_ram_mb\": 6321, \"memory_mb_used\": 1664}",
+         "type":"hypervisor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7449":{
+         "allocation":"compute",
+         "openstack_uuid":"98cf5700-747f-4444-bed9-262c149b3f6e",
+         "layer":"virtual",
+         "name":"Inspection",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"vm_state\": \"stopped\", \"internal_id\": null, \"availability_zone\": null, \"ramdisk_id\": \"76b3a911-224c-494c-be9b-ffbf62fb20a4\", \"instance_type_id\": \"42\", \"cleaned\": 0, \"vm_mode\": null, \"reservation_id\": \"r-b8vinm7m\", \"disable_terminate\": 0, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"default_swap_device\": null, \"hostname\": \"inspection\", \"launched_on\": \"compute\", \"display_description\": \"Inspection\", \"key_data\": \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCq1m9MvT5EopiToIT/LDp3GLcxBT8Yj1x++K+Q9/Cd87Huqi95rZpUjMa8JyoN0174DKmXLXYvDGLO1Mj5bNGlYTsCVJm00/CLrBrHgASWNRhaCXjHgQ7nuTY1DmS+IMC2bAgJt4vUwpxYh1Jehcl/BFFycMgh2MuGQbPmOlaG40wyPT9jlqWJkTG/+p5iy+8rxdCuHSw9escMKgVKZiOtN8Zc0WYdiSXL30qKIP+NfpFnq+PLDrXXZQstI/vjo/8385SiKr3etpYSbtTfSKYQtbCI2XH8Yd+zlfmbkpewJjHVtr4iEQUboREvboH1ntG1HtCQpmIfOfMimksZEggr Generated-by-Nova\\n\", \"power_state\": 4, \"default_ephemeral_device\": null, \"progress\": 0, \"project_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"root_device_name\": \"/dev/vda\", \"node\": \"compute\", \"ephemeral_gb\": 0, \"access_ip_v6\": null, \"access_ip_v4\": null, \"kernel_id\": \"51004178-7163-4f2d-bf70-50b6251ff75d\", \"key_name\": \"test\", \"image_id\": \"e85acf3a-f083-437a-8dd4-ce4efefc2ea2\", \"host\": \"compute\", \"ephemeral_key_uuid\": null, \"task_state\": null, \"shutdown_terminate\": 0, \"cell_name\": null, \"root_gb\": 0, \"locked\": 0, \"locked_by\": null, \"launch_index\": 0, \"memory_mb\": 64, \"vcpus\": 1, \"architecture\": null, \"auto_disk_config\": 0, \"os_type\": null, \"config_drive\": \"\", \"ports\": [\"f894f75d-1c57-440a-9833-b28d2ca53108\", \"6a4f5662-8867-48ba-a732-7ad1055a7ce2\"]}",
+         "type":"vm",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7448":{
+         "allocation":"controller",
+         "openstack_uuid":"f335817f-750f-4d14-8d78-a3851a8702cd",
+         "layer":"virtual",
+         "name":"m2.tiny",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 20, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 512, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7682":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PCIDev_48",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"48\", \"pci_busid\": \"0000:00:03.0\", \"PCIDevice\": \"82540EM Gigabit Ethernet Controller\", \"pci_type\": \"0200 [8086:100e] [8086:001e] 02\", \"name\": \"Intel Corporation 82540EM Gigabit Ethernet Controller\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7681":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PCIDev_208",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"208\", \"pci_busid\": \"0000:00:0d.0\", \"PCIDevice\": \"82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\", \"pci_type\": \"0106 [8086:2829] [0000:0000] 02\", \"name\": \"Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7680":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Cache_0x00000004_1_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000004\", \"complete_cpuset\": \"0x00000004\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000004\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000004\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7434":{
+         "openstack_uuid":"e85acf3a-f083-437a-8dd4-ce4efefc2ea2",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"cirros-0.3.2-x86_64-uec",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"active\", \"image_location\": \"file:///opt/stack/data/glance/images/e85acf3a-f083-437a-8dd4-ce4efefc2ea2\", \"kernel_id\": \"51004178-7163-4f2d-bf70-50b6251ff75d\", \"container_format\": \"ami\", \"min_ram\": 0, \"ramdisk_id\": \"76b3a911-224c-494c-be9b-ffbf62fb20a4\", \"disk_format\": \"ami\", \"meta_data\": {}, \"min_disk\": 0, \"protected\": 0, \"checksum\": \"4eada48c2843d2a262c814ddc92ecf2c\", \"owner\": \"be647c893f604b5297b3541c50cfc950\", \"is_public\": 1, \"virtual_size\": null, \"size\": 25165824}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7435":{
+         "openstack_uuid":"76b3a911-224c-494c-be9b-ffbf62fb20a4",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"cirros-0.3.2-x86_64-uec-ramdisk",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"active\", \"image_location\": \"file:///opt/stack/data/glance/images/76b3a911-224c-494c-be9b-ffbf62fb20a4\", \"container_format\": \"ari\", \"min_ram\": 0, \"disk_format\": \"ari\", \"meta_data\": {}, \"min_disk\": 0, \"protected\": 0, \"checksum\": \"68085af2609d03e51c7662395b5b6e4b\", \"owner\": \"be647c893f604b5297b3541c50cfc950\", \"is_public\": 1, \"virtual_size\": null, \"size\": 3723817}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7436":{
+         "openstack_uuid":"51004178-7163-4f2d-bf70-50b6251ff75d",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"cirros-0.3.2-x86_64-uec-kernel",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"active\", \"image_location\": \"file:///opt/stack/data/glance/images/51004178-7163-4f2d-bf70-50b6251ff75d\", \"container_format\": \"aki\", \"min_ram\": 0, \"disk_format\": \"aki\", \"meta_data\": {}, \"min_disk\": 0, \"protected\": 0, \"checksum\": \"836c69cbcd1dc4f225daedbab6edc7c7\", \"owner\": \"be647c893f604b5297b3541c50cfc950\", \"is_public\": 1, \"virtual_size\": null, \"size\": 4969360}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7437":{
+         "openstack_uuid":"1c5b0df9-a79a-4a1f-ab8a-8ec83444f5da",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"Forward_snap",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"image_state\": \"available\", \"container_format\": \"ami\", \"min_ram\": 0, \"ramdisk_id\": \"76b3a911-224c-494c-be9b-ffbf62fb20a4\", \"instance_type_id\": \"6\", \"instance_type_vcpus\": \"1\", \"owner\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"base_image_ref\": \"e85acf3a-f083-437a-8dd4-ce4efefc2ea2\", \"size\": 11010048, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"image_type\": \"snapshot\", \"disk_format\": \"ami\", \"instance_type_ephemeral_gb\": \"0\", \"kernel_id\": \"51004178-7163-4f2d-bf70-50b6251ff75d\", \"network_allocated\": \"True\", \"owner_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"status\": \"active\", \"image_location\": \"snapshot\", \"instance_type_root_gb\": \"0\", \"instance_type_name\": \"m1.nano\", \"instance_type_rxtx_factor\": \"1.0\", \"meta_data\": {}, \"min_disk\": 0, \"is_public\": 0, \"virtual_size\": null, \"instance_uuid\": \"ee673bc0-cf1e-4b93-8b39-5569d67ff441\", \"instance_type_memory_mb\": \"64\", \"instance_type_swap\": \"0\", \"checksum\": \"a5385d5a7f3dac5f8217f78940f34c0c\", \"protected\": 0, \"instance_type_flavorid\": \"42\"}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7430":{
+         "openstack_uuid":"f4d411d1-1753-405a-a4bb-53e3cab9c619",
+         "category":"network",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-router-d46qryrrer4y",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"l3_agent_id\": \"2d9c7cf6-d856-4d25-9b81-2b64ae4ab0d9\", \"enable_snat\": 1, \"gw_port_id\": \"835e9d79-fda5-4d3e-b176-8d8333969ade\", \"admin_state_up\": 1, \"ports\": [\"4b5d4c62-f28b-4e1b-9d8b-6fe50520e7d6\", \"835e9d79-fda5-4d3e-b176-8d8333969ade\"]}",
+         "type":"router",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7431":{
+         "openstack_uuid":"d49cf763-9f64-4411-94b6-de02956c684d",
+         "category":"network",
+         "layer":"virtual",
+         "name":"DPI_VNF-router-i3singgf5exi",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"l3_agent_id\": \"2d9c7cf6-d856-4d25-9b81-2b64ae4ab0d9\", \"enable_snat\": 1, \"gw_port_id\": \"66b22d00-9545-43da-b80d-8c9a1cf8ff74\", \"admin_state_up\": 1, \"ports\": [\"66b22d00-9545-43da-b80d-8c9a1cf8ff74\", \"8a0cd74f-e84a-415a-901a-1c102339ca3e\"]}",
+         "type":"router",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7432":{
+         "openstack_uuid":"c94fb44a-be3d-489a-b3d3-c6b8dce37f63",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"Fedora-x86_64-20-20140618-sda",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"active\", \"image_location\": \"file:///opt/stack/data/glance/images/c94fb44a-be3d-489a-b3d3-c6b8dce37f63\", \"container_format\": \"bare\", \"min_ram\": 0, \"disk_format\": \"qcow2\", \"meta_data\": {}, \"min_disk\": 0, \"protected\": 0, \"checksum\": \"9e486c3bf76219a6a37add392e425b36\", \"owner\": \"be647c893f604b5297b3541c50cfc950\", \"is_public\": 1, \"virtual_size\": null, \"size\": 209649664}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7433":{
+         "openstack_uuid":"29af55d7-6b83-4c24-859e-dc1539c49ccf",
+         "category":"storage",
+         "layer":"virtual",
+         "name":"Ubuntu14.04",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"active\", \"image_location\": \"file:///opt/stack/data/glance/images/29af55d7-6b83-4c24-859e-dc1539c49ccf\", \"description\": null, \"container_format\": \"bare\", \"min_ram\": 0, \"disk_format\": \"qcow2\", \"meta_data\": {}, \"min_disk\": 0, \"protected\": 0, \"checksum\": \"514536205fe7dffeb63cca500edbf67a\", \"owner\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"is_public\": 1, \"virtual_size\": null, \"size\": 256049664}",
+         "type":"image",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7438":{
+         "allocation":"controller",
+         "openstack_uuid":"cinder-service-2",
+         "layer":"service",
+         "name":"controller@lvmdriver-1",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"disabled_reason\": null, \"report_count\": 101239, \"availability_zone\": \"nova\"}",
+         "type":"cinder-volume",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7439":{
+         "allocation":"controller",
+         "openstack_uuid":"2112b07e-5435-4ae4-9fde-2c8f50541c07",
+         "layer":"virtual",
+         "name":"test",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"migration_status\": null, \"availability_zone\": \"nova\", \"provider_geometry\": null, \"replication_extended_status\": null, \"replication_status\": \"disabled\", \"snapshot_id\": null, \"ec2_id\": null, \"mountpoint\": null, \"size\": 1, \"user_id\": \"ce546a45700348798e17101b5f689084\", \"attach_time\": null, \"attached_host\": null, \"display_description\": \"\", \"cinder_volume\": \"controller@lvmdriver-1\", \"project_id\": \"7f6ad8cc6f61454c921ba8ab1c3f532b\", \"status\": \"available\", \"volume_type_id\": \"fe403cc7-a5bb-42db-8912-6bb47391e3fc\", \"provider_location\": null, \"consistencygroup_id\": null, \"source_volid\": null, \"provider_auth\": null, \"instance_uuid\": null, \"bootable\": 0, \"attach_status\": \"detached\", \"_name_id\": null, \"encryption_key_id\": null, \"replication_driver_data\": null}",
+         "type":"volume",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7427":{
+         "openstack_uuid":"8d4583a1-a78c-4586-97b5-41e2fbb8a3aa",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": null, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.57\", \"mac_address\": \"fa:16:3e:c5:b2:f6\", \"port_id\": \"5cc6b885-708c-4b35-8f78-621972f38164\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7426":{
+         "category":"network",
+         "openstack_uuid":"c059528c-7b00-49b2-b9d1-837867aab249",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-server1_port2-mysmdzp3lmsr",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.7\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:cf:5d:dd\", \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"98bbedd9-68a8-450d-9837-547eca390560\"}",
+         "type":"port"
+      },
+      "7425":{
+         "category":"network",
+         "openstack_uuid":"06853533-04f6-4ccc-b430-e72f01a05d4b",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-server2_port3-4slcneinkg63",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.2\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:e5:cb:0d\", \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"69bf56c2-2549-41d3-997b-ff4d5b2d64aa\"}",
+         "type":"port"
+      },
+      "7424":{
+         "allocation":"controller",
+         "openstack_uuid":"835e9d79-fda5-4d3e-b176-8d8333969ade",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"ip_address\": \"172.24.4.59\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"device_owner\": \"network:router_gateway\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:22:9d:ec\", \"segment\": \"fee08148-f500-4abc-b738-544e45ad59a4\", \"device_id\": \"f4d411d1-1753-405a-a4bb-53e3cab9c619\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7423":{
+         "openstack_uuid":"2505e7e1-e74d-41a7-8275-1aceaf52bd0d",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"d49cf763-9f64-4411-94b6-de02956c684d\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.50\", \"mac_address\": \"fa:16:3e:47:2f:db\", \"port_id\": \"4dc4f8a8-ab88-40a4-beee-824552e0c6eb\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7422":{
+         "category":"network",
+         "openstack_uuid":"f894f75d-1c57-440a-9833-b28d2ca53108",
+         "layer":"virtual",
+         "name":"DPI_VNF-server1_port1-v6cj225r6qn6",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.4\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:0a:61:32\", \"floatingips\": [\"2505e7e1-e74d-41a7-8275-1aceaf52bd0d\"], \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"98cf5700-747f-4444-bed9-262c149b3f6e\"}",
+         "type":"port"
+      },
+      "7421":{
+         "openstack_uuid":"f29f9ac3-6180-4ba5-8a94-64dab52562ff",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"f4d411d1-1753-405a-a4bb-53e3cab9c619\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.60\", \"mac_address\": \"fa:16:3e:4d:9c:aa\", \"port_id\": \"28650e2b-706c-474c-8433-d1fb8a264707\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7420":{
+         "category":"network",
+         "openstack_uuid":"f7d1d787-b9b0-4a95-93bc-02ed7692570e",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-server2_port2-3fk6dk722x7u",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.4\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:9a:a5:82\", \"floatingips\": [\"f29f9ac3-6180-4ba5-8a94-64dab52562ff\"], \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"69bf56c2-2549-41d3-997b-ff4d5b2d64aa\"}",
+         "type":"port"
+      },
+      "7429":{
+         "openstack_uuid":"c5a40f3a-574f-40e2-98df-fc9fbf86a0a9",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": null, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.56\", \"mac_address\": \"fa:16:3e:9c:2c:d2\", \"port_id\": \"37f6e90a-5ae4-45d1-9bc0-8b0c03390145\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7547":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Core_0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"allowed_cpuset\": \"0x00000001\", \"cpuset\": \"0x00000001\", \"complete_cpuset\": \"0x00000001\", \"online_cpuset\": \"0x00000001\", \"os_index\": \"0\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7498":{
+         "allocation":"compute",
+         "category":"network",
+         "layer":"physical",
+         "name":"compute_OSDev_eth1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"osdev_type\": \"2\", \"name\": \"eth1\", \"Address\": \"08:00:27:99:79:6f\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7499":{
+         "allocation":"compute",
+         "category":"network",
+         "layer":"physical",
+         "name":"compute_OSDev_eth0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"osdev_type\": \"2\", \"name\": \"eth0\", \"Address\": \"08:00:27:f0:9b:2d\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7559":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Core_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"allowed_cpuset\": \"0x00000002\", \"cpuset\": \"0x00000002\", \"complete_cpuset\": \"0x00000002\", \"online_cpuset\": \"0x00000002\", \"os_index\": \"1\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7496":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PCIDev_128",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"128\", \"pci_busid\": \"0000:00:08.0\", \"PCIDevice\": \"82540EM Gigabit Ethernet Controller\", \"pci_type\": \"0200 [8086:100e] [8086:001e] 02\", \"name\": \"Intel Corporation 82540EM Gigabit Ethernet Controller\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7497":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Socket_0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"allowed_cpuset\": \"0x0000000f\", \"CPUModel\": \"Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz\", \"cpuset\": \"0x0000000f\", \"complete_cpuset\": \"0x0000000f\", \"online_cpuset\": \"0x0000000f\", \"os_index\": \"0\"}",
+         "type":"Socket",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7495":{
+         "allocation":"compute",
+         "category":"storage",
+         "layer":"physical",
+         "name":"compute_OSDev_sda",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"osdev_type\": \"0\", \"name\": \"sda\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7412":{
+         "openstack_uuid":"ef3a2156-3a04-4ffe-a685-fc0b5ce4ca6d",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"d49cf763-9f64-4411-94b6-de02956c684d\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.51\", \"mac_address\": \"fa:16:3e:37:6d:15\", \"port_id\": \"fa997457-4cad-4f26-b14f-714e8c73aa74\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7413":{
+         "allocation":"controller",
+         "openstack_uuid":"8a0cd74f-e84a-415a-901a-1c102339ca3e",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.1\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"network:router_interface\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:92:9c:42\", \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"d49cf763-9f64-4411-94b6-de02956c684d\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7410":{
+         "openstack_uuid":"eab9e86f-6459-4598-991f-3861476f1337",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"d49cf763-9f64-4411-94b6-de02956c684d\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.49\", \"mac_address\": \"fa:16:3e:df:20:2f\", \"port_id\": \"74c49a4d-607d-441e-b4d8-053ecbda6a09\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7411":{
+         "category":"network",
+         "openstack_uuid":"b5524eb8-5b73-4bc8-a738-21d3d8b8fa52",
+         "layer":"virtual",
+         "name":"DPI_VNF-server2_port2-5tavwipa2kh7",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.7\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:73:f3:d0\", \"floatingips\": [\"ef3a2156-3a04-4ffe-a685-fc0b5ce4ca6d\"], \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"4a67a69b-7c78-4b89-956e-3cfe04c93375\"}",
+         "type":"port"
+      },
+      "7416":{
+         "openstack_uuid":"58fbd4c3-a538-4b67-a02a-a69f4e926190",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"f4d411d1-1753-405a-a4bb-53e3cab9c619\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.62\", \"mac_address\": \"fa:16:3e:7f:02:05\", \"port_id\": \"fd098882-6883-4fc9-8b7f-02e6bbcbb5d6\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7417":{
+         "category":"network",
+         "openstack_uuid":"6a4f5662-8867-48ba-a732-7ad1055a7ce2",
+         "layer":"virtual",
+         "name":"DPI_VNF-server1_port2-bmytwn6no5cu",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.6\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:1a:f1:17\", \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"98cf5700-747f-4444-bed9-262c149b3f6e\"}",
+         "type":"port"
+      },
+      "7414":{
+         "allocation":"controller",
+         "openstack_uuid":"d636623c-e798-4236-9402-f550b554a431",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.3\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"network:dhcp\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:91:46:42\", \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"dhcpd3377d3c-a0d1-5d71-9947-f17125c357bb-f723a700-f023-4c39-beb9-ce98fffbc3f7\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7415":{
+         "category":"network",
+         "openstack_uuid":"cb4406d1-fa72-486a-bd47-e293bb7c7189",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-server2_port1-3twckdjerb6g",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.6\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:23:d9:70\", \"floatingips\": [\"58fbd4c3-a538-4b67-a02a-a69f4e926190\"], \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"69bf56c2-2549-41d3-997b-ff4d5b2d64aa\"}",
+         "type":"port"
+      },
+      "7418":{
+         "allocation":"controller",
+         "openstack_uuid":"499cfef2-958d-4d9d-84c7-d27af2aced1b",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.3\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"network:dhcp\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:4b:69:9f\", \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"dhcpd3377d3c-a0d1-5d71-9947-f17125c357bb-fa8e8342-ecc5-447f-9c05-faffc329eff9\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7419":{
+         "allocation":"controller",
+         "openstack_uuid":"4b5d4c62-f28b-4e1b-9d8b-6fe50520e7d6",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.1\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"network:router_interface\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:cf:64:42\", \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"f4d411d1-1753-405a-a4bb-53e3cab9c619\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7485":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PCIDev_32",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"InnoTek Systemberatung GmbH\", \"os_index\": \"32\", \"pci_busid\": \"0000:00:02.0\", \"PCIDevice\": \"VirtualBox Graphics Adapter\", \"pci_type\": \"0300 [80ee:beef] [0000:0000] 00\", \"name\": \"InnoTek Systemberatung GmbH VirtualBox Graphics Adapter\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7484":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Bridge_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"bridge_pci\": \"0000:[00-00]\", \"bridge_type\": \"0-1\", \"depth\": \"0\", \"os_index\": \"0\"}",
+         "type":"Bridge",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7487":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Cache_0x00000002_1_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000002\", \"complete_cpuset\": \"0x00000002\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000002\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000002\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7486":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PCIDev_17",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"17\", \"pci_busid\": \"0000:00:01.1\", \"PCIDevice\": \"82371AB/EB/MB PIIX4 IDE\", \"pci_type\": \"0101 [8086:7111] [0000:0000] 01\", \"name\": \"Intel Corporation 82371AB/EB/MB PIIX4 IDE\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7481":{
+         "allocation":"controller",
+         "category":"storage",
+         "layer":"physical",
+         "name":"controller_OSDev_sr0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"osdev_type\": \"0\", \"name\": \"sr0\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7480":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Cache_0x00000004_1_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000004\", \"complete_cpuset\": \"0x00000004\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000004\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000004\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7483":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Cache_0x00000002_1_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000002\", \"complete_cpuset\": \"0x00000002\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000002\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000002\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7482":{
+         "allocation":"controller",
+         "category":"storage",
+         "layer":"physical",
+         "name":"controller_OSDev_sr1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"osdev_type\": \"0\", \"name\": \"sr1\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7489":{
+         "allocation":"compute",
+         "category":"storage",
+         "layer":"physical",
+         "name":"compute_OSDev_sr0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"osdev_type\": \"0\", \"name\": \"sr0\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7488":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Cache_0x00000008_1_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000008\", \"complete_cpuset\": \"0x00000008\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000008\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000008\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7409":{
+         "category":"network",
+         "openstack_uuid":"8aa420d0-8f53-491b-ba96-a8a9c0c8881c",
+         "layer":"virtual",
+         "name":"DPI_VNF-server2_port1-hjj3i4vx6ul5",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.2\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:dd:c2:53\", \"floatingips\": [\"eab9e86f-6459-4598-991f-3861476f1337\"], \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"4a67a69b-7c78-4b89-956e-3cfe04c93375\"}",
+         "type":"port"
+      },
+      "7408":{
+         "category":"network",
+         "openstack_uuid":"f982fb40-895d-4961-a9a7-a7ebdbbc838d",
+         "layer":"virtual",
+         "name":"DPI_VNF-server2_port3-wfjxcp6idx6h",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ip_address\": \"10.10.0.5\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:2a:21:a2\", \"segment\": \"cba596b3-35d8-42e0-9ead-1a3ef6772cd2\", \"device_id\": \"4a67a69b-7c78-4b89-956e-3cfe04c93375\"}",
+         "type":"port"
+      },
+      "7405":{
+         "allocation":"controller",
+         "openstack_uuid":"66b22d00-9545-43da-b80d-8c9a1cf8ff74",
+         "layer":"virtual",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"ip_address\": \"172.24.4.48\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"device_owner\": \"network:router_gateway\", \"agent_id\": \"83cc0105-7c5f-4336-9bfb-e07f1a9ea4bb\", \"mac_address\": \"fa:16:3e:12:78:6d\", \"segment\": \"fee08148-f500-4abc-b738-544e45ad59a4\", \"device_id\": \"d49cf763-9f64-4411-94b6-de02956c684d\"}",
+         "category":"network",
+         "type":"port",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7404":{
+         "openstack_uuid":"4b4500f6-0636-468f-a948-a3e2e1a67406",
+         "category":"network",
+         "layer":"virtual",
+         "name":"public-subnet",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"enable_dhcp\": 0, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"ipv6_ra_mode\": null, \"gateway_ip\": \"172.24.4.1\", \"ipv6_address_mode\": null, \"ip_version\": 4, \"shared\": 0, \"cidr\": \"172.24.4.0/24\"}",
+         "type":"subnet",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7407":{
+         "openstack_uuid":"458ed0e1-2f7c-4483-99b3-36747394b177",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": \"f4d411d1-1753-405a-a4bb-53e3cab9c619\", \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.61\", \"mac_address\": \"fa:16:3e:d4:12:98\", \"port_id\": \"4bde9c56-5836-4a09-9bb6-ad72894da588\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7406":{
+         "category":"network",
+         "openstack_uuid":"1791feb4-a220-4354-8335-12f3d23a104c",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-server1_port1-eapwlnalfug6",
+         "timestamp":1424777630.410861,
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland",
+         "allocation":"compute",
+         "attributes":"{\"status\": \"ACTIVE\", \"vif_type\": \"ovs\", \"admin_state_up\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ip_address\": \"10.2.1.5\", \"vif_details\": {\"port_filter\": true, \"ovs_hybrid_plug\": true}, \"driver\": \"openvswitch\", \"vnic_type\": \"normal\", \"subnet_id\": \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"device_owner\": \"compute:None\", \"agent_id\": \"44142f35-3c6f-4c2f-a432-ed5f75d3a826\", \"mac_address\": \"fa:16:3e:b3:ca:18\", \"floatingips\": [\"458ed0e1-2f7c-4483-99b3-36747394b177\"], \"segment\": \"e2430f6e-6b32-4029-8694-b3243ddaecd7\", \"device_id\": \"98bbedd9-68a8-450d-9837-547eca390560\"}",
+         "type":"port"
+      },
+      "7401":{
+         "openstack_uuid":"9186be90-fe7a-484a-8316-a1d4b170a52e",
+         "category":"network",
+         "layer":"virtual",
+         "name":"public",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"admin_state_up\": 1, \"segmentation_id\": 1002, \"is_dynamic\": 0, \"physical_network\": null, \"shared\": 0, \"network_type\": \"vxlan\"}",
+         "type":"net",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7400":{
+         "openstack_uuid":"fa8e8342-ecc5-447f-9c05-faffc329eff9",
+         "category":"network",
+         "layer":"virtual",
+         "name":"dpi_vnf_tiny_private",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"ACTIVE\", \"admin_state_up\": 1, \"segmentation_id\": 1003, \"is_dynamic\": 0, \"physical_network\": null, \"dhcp_agent_id\": \"9dc676ae-23fe-4200-a751-d6296aaee87a\", \"shared\": 0, \"network_type\": \"vxlan\"}",
+         "type":"net",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7403":{
+         "openstack_uuid":"8014c067-c1c1-4715-8565-db1119c62bb6",
+         "category":"network",
+         "layer":"virtual",
+         "name":"DPI_VNF_TINY-private_subnet-6bjneufhuhpo",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"enable_dhcp\": 1, \"network_id\": \"fa8e8342-ecc5-447f-9c05-faffc329eff9\", \"ipv6_ra_mode\": null, \"gateway_ip\": \"10.2.1.1\", \"ipv6_address_mode\": null, \"ip_version\": 4, \"shared\": 0, \"cidr\": \"10.2.1.0/24\"}",
+         "type":"subnet",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7402":{
+         "openstack_uuid":"2126c7cc-a4a9-43eb-b80e-2b95ff022266",
+         "category":"network",
+         "layer":"virtual",
+         "name":"DPI_VNF-private_subnet-4f5mzrigcpss",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"enable_dhcp\": 1, \"network_id\": \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"ipv6_ra_mode\": null, \"gateway_ip\": \"10.10.0.1\", \"ipv6_address_mode\": null, \"ip_version\": 4, \"shared\": 0, \"cidr\": \"10.10.0.0/24\"}",
+         "type":"subnet",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7678":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Core_3",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"allowed_cpuset\": \"0x00000008\", \"cpuset\": \"0x00000008\", \"complete_cpuset\": \"0x00000008\", \"online_cpuset\": \"0x00000008\", \"os_index\": \"3\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7679":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Cache_0x00000001_1_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000001\", \"complete_cpuset\": \"0x00000001\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000001\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000001\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7478":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PCIDev_17",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"17\", \"pci_busid\": \"0000:00:01.1\", \"PCIDevice\": \"82371AB/EB/MB PIIX4 IDE\", \"pci_type\": \"0101 [8086:7111] [0000:0000] 01\", \"name\": \"Intel Corporation 82371AB/EB/MB PIIX4 IDE\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7479":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PCIDev_32",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"InnoTek Systemberatung GmbH\", \"os_index\": \"32\", \"pci_busid\": \"0000:00:02.0\", \"PCIDevice\": \"VirtualBox Graphics Adapter\", \"pci_type\": \"0300 [80ee:beef] [0000:0000] 00\", \"name\": \"InnoTek Systemberatung GmbH VirtualBox Graphics Adapter\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7470":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PU_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000001\", \"cpu cores\": \"3\", \"bogomips\": \"6756.49\", \"online_cpuset\": \"0x00000001\", \"apicid\": \"0\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"0\", \"core id\": \"0\", \"id\": \"0\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000001\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000001\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"0\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"3\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3378.249\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7471":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PCIDev_128",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"128\", \"pci_busid\": \"0000:00:08.0\", \"PCIDevice\": \"82540EM Gigabit Ethernet Controller\", \"pci_type\": \"0200 [8086:100e] [8086:001e] 02\", \"name\": \"Intel Corporation 82540EM Gigabit Ethernet Controller\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7472":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Socket_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"allowed_cpuset\": \"0x00000007\", \"CPUModel\": \"Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz\", \"cpuset\": \"0x00000007\", \"complete_cpuset\": \"0x00000007\", \"online_cpuset\": \"0x00000007\", \"os_index\": \"0\"}",
+         "type":"Socket",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7473":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PCIDev_208",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"208\", \"pci_busid\": \"0000:00:0d.0\", \"PCIDevice\": \"82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\", \"pci_type\": \"0106 [8086:2829] [0000:0000] 02\", \"name\": \"Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7474":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Core_2",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"allowed_cpuset\": \"0x00000004\", \"cpuset\": \"0x00000004\", \"complete_cpuset\": \"0x00000004\", \"online_cpuset\": \"0x00000004\", \"os_index\": \"2\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7475":{
+         "allocation":"controller",
+         "category":"storage",
+         "layer":"physical",
+         "name":"controller_OSDev_sda",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"osdev_type\": \"0\", \"name\": \"sda\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7476":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Core_0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"allowed_cpuset\": \"0x00000001\", \"cpuset\": \"0x00000001\", \"complete_cpuset\": \"0x00000001\", \"online_cpuset\": \"0x00000001\", \"os_index\": \"0\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7477":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Core_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"allowed_cpuset\": \"0x00000002\", \"cpuset\": \"0x00000002\", \"complete_cpuset\": \"0x00000002\", \"online_cpuset\": \"0x00000002\", \"os_index\": \"1\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7460":{
+         "allocation":"controller",
+         "openstack_uuid":"84",
+         "layer":"virtual",
+         "name":"m1.micro",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"disabled\": 0, \"root_gb\": 0, \"ephemeral_gb\": 0, \"controller_id\": \"3764a1c85dcf40bf833f3b350d28a2c2\", \"memory_mb\": 128, \"vcpus\": 1, \"swap\": 0, \"rxtx_factor\": 1.0, \"is_public\": 1, \"vcpu_weight\": null}",
+         "type":"flavor",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7583":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Core_2",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"allowed_cpuset\": \"0x00000004\", \"cpuset\": \"0x00000004\", \"complete_cpuset\": \"0x00000004\", \"online_cpuset\": \"0x00000004\", \"os_index\": \"2\"}",
+         "type":"Core",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7504":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PU_0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000001\", \"cpu cores\": \"4\", \"bogomips\": \"6754.48\", \"online_cpuset\": \"0x00000001\", \"apicid\": \"0\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"0\", \"core id\": \"0\", \"id\": \"0\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000001\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000001\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"0\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"4\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3377.241\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7505":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PU_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000002\", \"cpu cores\": \"4\", \"bogomips\": \"6754.48\", \"online_cpuset\": \"0x00000002\", \"apicid\": \"1\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"1\", \"core id\": \"1\", \"id\": \"1\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000002\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000002\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"1\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"4\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3377.241\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7469":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PU_2",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000004\", \"cpu cores\": \"3\", \"bogomips\": \"6756.49\", \"online_cpuset\": \"0x00000004\", \"apicid\": \"2\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"2\", \"core id\": \"2\", \"id\": \"2\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000004\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000004\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"2\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"3\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3378.249\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7468":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PU_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000002\", \"cpu cores\": \"3\", \"bogomips\": \"6756.49\", \"online_cpuset\": \"0x00000002\", \"apicid\": \"1\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"1\", \"core id\": \"1\", \"id\": \"1\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000002\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000002\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"1\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"3\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3378.249\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7500":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Cache_0x0000000f_2_1",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x0000000f\", \"complete_cpuset\": \"0x0000000f\", \"cache_associativity\": \"24\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x0000000f\", \"depth\": \"2\", \"allowed_cpuset\": \"0x0000000f\", \"cache_size\": \"6291456\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7501":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_Bridge_0",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"bridge_pci\": \"0000:[00-00]\", \"bridge_type\": \"0-1\", \"depth\": \"0\", \"os_index\": \"0\"}",
+         "type":"Bridge",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7502":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PU_2",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000004\", \"cpu cores\": \"4\", \"bogomips\": \"6754.48\", \"online_cpuset\": \"0x00000004\", \"apicid\": \"2\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"2\", \"core id\": \"2\", \"id\": \"2\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000004\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000004\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"2\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"4\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3377.241\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7503":{
+         "allocation":"compute",
+         "category":"compute",
+         "layer":"physical",
+         "name":"compute_PU_3",
+         "timestamp":1424777686.977308,
+         "attributes":"{\"vendor_id\": \"genuineintel\", \"clflush size\": \"64\", \"cpuset\": \"0x00000008\", \"cpu cores\": \"4\", \"bogomips\": \"6754.48\", \"online_cpuset\": \"0x00000008\", \"apicid\": \"3\", \"fpu_exception\": \"yes\", \"stepping\": \"3\", \"cache_alignment\": \"64\", \"cpu family\": \"6\", \"microcode\": \"0x19\", \"os_index\": \"3\", \"core id\": \"3\", \"id\": \"3\", \"wp\": \"yes\", \"cache size\": \"6144 kb\", \"cpuid level\": \"5\", \"complete_cpuset\": \"0x00000008\", \"fpu\": \"yes\", \"allowed_cpuset\": \"0x00000008\", \"flags\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl pni ssse3 lahf_lm\", \"initial apicid\": \"3\", \"model name\": \"intel(r) core(tm) i7_4770 cpu @ 3.40ghz\", \"siblings\": \"4\", \"model\": \"60\", \"physical id\": \"0\", \"cpu mhz\": \"3377.241\", \"address sizes\": \"39 bits physical, 48 bits virtual\"}",
+         "type":"PU",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7463":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Cache_0x00000007_2_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000007\", \"complete_cpuset\": \"0x00000007\", \"cache_associativity\": \"24\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000007\", \"depth\": \"2\", \"allowed_cpuset\": \"0x00000007\", \"cache_size\": \"6291456\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7462":{
+         "allocation":"controller",
+         "openstack_uuid":"e85446d1-1fcd-42e6-8633-90136c9c0632",
+         "layer":"vnf",
+         "name":"DPI_VNF_TINY",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"COMPLETE\", \"parameters\": {\"parameters\": {\"private_net_name\": \"dpi_vnf_tiny_private\", \"public_net\": \"public\", \"private_net_cidr\": \"10.2.1.0/24\"}, \"resource_registry\": {\"resources\": {}}}, \"heat_controller_id\": \"5d005d371cfe4789bd6c854fd693c657\", \"timeout\": 60, \"action\": \"CREATE\", \"status_reason\": \"Stack CREATE completed successfully\", \"resources\": [\"58fbd4c3-a538-4b67-a02a-a69f4e926190\", \"69bf56c2-2549-41d3-997b-ff4d5b2d64aa\", \"8014c067-c1c1-4715-8565-db1119c62bb6\", \"06853533-04f6-4ccc-b430-e72f01a05d4b\", \"f4d411d1-1753-405a-a4bb-53e3cab9c619\", \"1791feb4-a220-4354-8335-12f3d23a104c\", \"c059528c-7b00-49b2-b9d1-837867aab249\", \"98bbedd9-68a8-450d-9837-547eca390560\", \"f4d411d1-1753-405a-a4bb-53e3cab9c619\", \"458ed0e1-2f7c-4483-99b3-36747394b177\", \"f29f9ac3-6180-4ba5-8a94-64dab52562ff\", \"f7d1d787-b9b0-4a95-93bc-02ed7692570e\", \"cb4406d1-fa72-486a-bd47-e293bb7c7189\", \"fa8e8342-ecc5-447f-9c05-faffc329eff9\"], \"raw_template\": {\"heat_template_version\": \"2014-10-16\", \"description\": \"HOT template to create a DPI.\\n\", \"parameters\": {\"private_net_name\": {\"type\": \"string\", \"description\": \"Name of private network to be created\"}, \"public_net\": {\"type\": \"string\", \"description\": \"ID or name of public network for which floating IP addresses will be allocated\\n\"}, \"private_net_cidr\": {\"type\": \"string\", \"description\": \"Private network address (CIDR notation)\"}}, \"resources\": {\"server2_port1\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_port2\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_port3\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_floating_ip1\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server2_port1\"}}}, \"server1\": {\"type\": \"OS::Nova::Server\", \"properties\": {\"key_name\": \"test\", \"image\": \"Ubuntu14.04\", \"name\": \"Inspection\", \"flavor\": \"m2.tiny\", \"networks\": [{\"port\": {\"get_resource\": \"server1_port1\"}}, {\"port\": {\"get_resource\": \"server1_port2\"}}]}}, \"server2\": {\"type\": \"OS::Nova::Server\", \"properties\": {\"key_name\": \"test\", \"image\": \"Ubuntu14.04\", \"name\": \"Forwarding\", \"flavor\": \"m2.tiny\", \"networks\": [{\"port\": {\"get_resource\": \"server2_port1\"}}, {\"port\": {\"get_resource\": \"server2_port2\"}}, {\"port\": {\"get_resource\": \"server2_port3\"}}]}}, \"router_interface\": {\"type\": \"OS::Neutron::RouterInterface\", \"properties\": {\"router_id\": {\"get_resource\": \"router\"}, \"subnet_id\": {\"get_resource\": \"private_subnet\"}}}, \"server1_port1\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_floating_ip2\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server2_port2\"}}}, \"server1_port2\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"private_subnet\": {\"type\": \"OS::Neutron::Subnet\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"cidr\": {\"get_param\": \"private_net_cidr\"}}}, \"private_net\": {\"type\": \"OS::Neutron::Net\", \"properties\": {\"name\": {\"get_param\": \"private_net_name\"}}}, \"router\": {\"type\": \"OS::Neutron::Router\", \"properties\": {\"external_gateway_info\": {\"network\": {\"get_param\": \"public_net\"}}}}, \"server1_floating_ip1\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server1_port1\"}}}}}}",
+         "type":"stack",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7461":{
+         "allocation":"controller",
+         "openstack_uuid":"34e86c91-5929-4f9f-b17b-27be829da16d",
+         "layer":"vnf",
+         "name":"DPI_VNF",
+         "timestamp":1424777630.410861,
+         "attributes":"{\"status\": \"COMPLETE\", \"parameters\": {\"parameters\": {\"private_net_name\": \"dpi_private_network\", \"public_net\": \"public\", \"private_net_cidr\": \"10.10.0.0/24\"}, \"resource_registry\": {\"resources\": {}}}, \"heat_controller_id\": \"5d005d371cfe4789bd6c854fd693c657\", \"timeout\": 60, \"action\": \"CREATE\", \"status_reason\": \"Stack CREATE completed successfully\", \"resources\": [\"b5524eb8-5b73-4bc8-a738-21d3d8b8fa52\", \"8aa420d0-8f53-491b-ba96-a8a9c0c8881c\", \"2505e7e1-e74d-41a7-8275-1aceaf52bd0d\", \"eab9e86f-6459-4598-991f-3861476f1337\", \"4a67a69b-7c78-4b89-956e-3cfe04c93375\", \"98cf5700-747f-4444-bed9-262c149b3f6e\", \"2126c7cc-a4a9-43eb-b80e-2b95ff022266\", \"ef3a2156-3a04-4ffe-a685-fc0b5ce4ca6d\", \"6a4f5662-8867-48ba-a732-7ad1055a7ce2\", \"f723a700-f023-4c39-beb9-ce98fffbc3f7\", \"d49cf763-9f64-4411-94b6-de02956c684d\", \"d49cf763-9f64-4411-94b6-de02956c684d\", \"f894f75d-1c57-440a-9833-b28d2ca53108\", \"f982fb40-895d-4961-a9a7-a7ebdbbc838d\"], \"raw_template\": {\"heat_template_version\": \"2014-10-16\", \"description\": \"HOT template to create a DPI\\n\", \"parameters\": {\"private_net_name\": {\"type\": \"string\", \"description\": \"Name of private network to be created\"}, \"public_net\": {\"type\": \"string\", \"description\": \"ID or name of public network for which floating IP addresses will be allocated\\n\"}, \"private_net_cidr\": {\"type\": \"string\", \"description\": \"Private network address (CIDR notation)\"}}, \"resources\": {\"server2_port1\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_port2\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_port3\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_floating_ip1\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server2_port1\"}}}, \"server1\": {\"type\": \"OS::Nova::Server\", \"properties\": {\"key_name\": \"test\", \"image\": \"cirros-0.3.2-x86_64-uec\", \"name\": \"Inspection\", \"flavor\": \"m1.nano\", \"networks\": [{\"port\": {\"get_resource\": \"server1_port1\"}}, {\"port\": {\"get_resource\": \"server1_port2\"}}]}}, \"server2\": {\"type\": \"OS::Nova::Server\", \"properties\": {\"key_name\": \"test\", \"image\": \"cirros-0.3.2-x86_64-uec\", \"name\": \"Forwarding\", \"flavor\": \"m1.nano\", \"networks\": [{\"port\": {\"get_resource\": \"server2_port1\"}}, {\"port\": {\"get_resource\": \"server2_port2\"}}, {\"port\": {\"get_resource\": \"server2_port3\"}}]}}, \"router_interface\": {\"type\": \"OS::Neutron::RouterInterface\", \"properties\": {\"router_id\": {\"get_resource\": \"router\"}, \"subnet_id\": {\"get_resource\": \"private_subnet\"}}}, \"server1_port1\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"server2_floating_ip2\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server2_port2\"}}}, \"server1_port2\": {\"type\": \"OS::Neutron::Port\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"fixed_ips\": [{\"subnet_id\": {\"get_resource\": \"private_subnet\"}}]}}, \"private_subnet\": {\"type\": \"OS::Neutron::Subnet\", \"properties\": {\"network_id\": {\"get_resource\": \"private_net\"}, \"cidr\": {\"get_param\": \"private_net_cidr\"}}}, \"private_net\": {\"type\": \"OS::Neutron::Net\", \"properties\": {\"name\": {\"get_param\": \"private_net_name\"}}}, \"router\": {\"type\": \"OS::Neutron::Router\", \"properties\": {\"external_gateway_info\": {\"network\": {\"get_param\": \"public_net\"}}}}, \"server1_floating_ip1\": {\"type\": \"OS::Neutron::FloatingIP\", \"properties\": {\"floating_network\": {\"get_param\": \"public_net\"}, \"port_id\": {\"get_resource\": \"server1_port1\"}}}}}}",
+         "type":"stack",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7428":{
+         "openstack_uuid":"385bdc9f-4d39-4101-ad74-b5fd2ce2bed0",
+         "category":"network",
+         "layer":"virtual",
+         "attributes":"{\"router_id\": null, \"network_id\": \"9186be90-fe7a-484a-8316-a1d4b170a52e\", \"subnet_id\": \"4b4500f6-0636-468f-a948-a3e2e1a67406\", \"floating_ip_address\": \"172.24.4.58\", \"mac_address\": \"fa:16:3e:df:30:a0\", \"port_id\": \"c32c060c-f4c8-468f-8333-bd5f8509ff49\"}",
+         "timestamp":1424777630.410861,
+         "type":"floatingip",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7467":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_Cache_0x00000001_1_1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"cache_type\": \"1\", \"cpuset\": \"0x00000001\", \"complete_cpuset\": \"0x00000001\", \"cache_associativity\": \"8\", \"cache_linesize\": \"64\", \"online_cpuset\": \"0x00000001\", \"depth\": \"1\", \"allowed_cpuset\": \"0x00000001\", \"cache_size\": \"32768\"}",
+         "type":"Cache",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7466":{
+         "allocation":"controller",
+         "category":"network",
+         "layer":"physical",
+         "name":"controller_OSDev_eth0",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"osdev_type\": \"2\", \"name\": \"eth0\", \"Address\": \"08:00:27:5c:58:30\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7465":{
+         "allocation":"controller",
+         "category":"compute",
+         "layer":"physical",
+         "name":"controller_PCIDev_48",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"pci_link_speed\": \"0.000000\", \"PCIVendor\": \"Intel Corporation\", \"os_index\": \"48\", \"pci_busid\": \"0000:00:03.0\", \"PCIDevice\": \"82540EM Gigabit Ethernet Controller\", \"pci_type\": \"0200 [8086:100e] [8086:001e] 02\", \"name\": \"Intel Corporation 82540EM Gigabit Ethernet Controller\"}",
+         "type":"PCIDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      },
+      "7464":{
+         "allocation":"controller",
+         "category":"network",
+         "layer":"physical",
+         "name":"controller_OSDev_eth1",
+         "timestamp":1424777673.625525,
+         "attributes":"{\"osdev_type\": \"2\", \"name\": \"eth1\", \"Address\": \"08:00:27:a7:63:f7\"}",
+         "type":"OSDev",
+         "pop":"Intel Ireland's Leixlip Campus, Kildare, Ireland"
+      }
+   },
+   "edges":[
+      [
+         "(7463)",
+         "(7483)",
+         "INTERNAL"
+      ],
+      [
+         "(7465)",
+         "(7466)",
+         "INTERNAL"
+      ],
+      [
+         "(7463)",
+         "(7480)",
+         "INTERNAL"
+      ],
+      [
+         "(7463)",
+         "(7467)",
+         "INTERNAL"
+      ],
+      [
+         "(7472)",
+         "(7463)",
+         "INTERNAL"
+      ],
+      [
+         "(7473)",
+         "(7475)",
+         "INTERNAL"
+      ],
+      [
+         "(7467)",
+         "(7476)",
+         "INTERNAL"
+      ],
+      [
+         "(7471)",
+         "(7464)",
+         "INTERNAL"
+      ],
+      [
+         "(7474)",
+         "(7469)",
+         "INTERNAL"
+      ],
+      [
+         "(7476)",
+         "(7470)",
+         "INTERNAL"
+      ],
+      [
+         "(7394)",
+         "(7445)",
+         "host"
+      ],
+      [
+         "(7445)",
+         "(7446)",
+         "has_hypervisor"
+      ],
+      [
+         "(7387)",
+         "(7443)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7444)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7440)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7441)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7438)",
+         "host"
+      ],
+      [
+         "(7438)",
+         "(7439)",
+         "has_volume"
+      ],
+      [
+         "(7392)",
+         "(7436)",
+         "stores"
+      ],
+      [
+         "(7392)",
+         "(7437)",
+         "stores"
+      ],
+      [
+         "(7451)",
+         "(7406)",
+         "has_port"
+      ],
+      [
+         "(7451)",
+         "(7426)",
+         "has_port"
+      ],
+      [
+         "(7446)",
+         "(7452)",
+         "has_instance"
+      ],
+      [
+         "(7452)",
+         "(7434)",
+         "has_image"
+      ],
+      [
+         "(7449)",
+         "(7417)",
+         "has_port"
+      ],
+      [
+         "(7446)",
+         "(7451)",
+         "has_instance"
+      ],
+      [
+         "(7451)",
+         "(7433)",
+         "has_image"
+      ],
+      [
+         "(7451)",
+         "(7448)",
+         "has_flavor"
+      ],
+      [
+         "(7480)",
+         "(7474)",
+         "INTERNAL"
+      ],
+      [
+         "(7478)",
+         "(7482)",
+         "INTERNAL"
+      ],
+      [
+         "(7484)",
+         "(7465)",
+         "INTERNAL"
+      ],
+      [
+         "(7483)",
+         "(7477)",
+         "INTERNAL"
+      ],
+      [
+         "(7387)",
+         "(7472)",
+         "INTERNAL"
+      ],
+      [
+         "(7452)",
+         "(7409)",
+         "has_port"
+      ],
+      [
+         "(7478)",
+         "(7481)",
+         "INTERNAL"
+      ],
+      [
+         "(7387)",
+         "(7484)",
+         "INTERNAL"
+      ],
+      [
+         "(7392)",
+         "(7435)",
+         "stores"
+      ],
+      [
+         "(7392)",
+         "(7434)",
+         "stores"
+      ],
+      [
+         "(7501)",
+         "(7681)",
+         "INTERNAL"
+      ],
+      [
+         "(7430)",
+         "(7419)",
+         "has_port"
+      ],
+      [
+         "(7398)",
+         "(7430)",
+         "has_router"
+      ],
+      [
+         "(7398)",
+         "(7431)",
+         "has_router"
+      ],
+      [
+         "(7430)",
+         "(7424)",
+         "has_port"
+      ],
+      [
+         "(7431)",
+         "(7413)",
+         "has_port"
+      ],
+      [
+         "(7431)",
+         "(7405)",
+         "has_port"
+      ],
+      [
+         "(7392)",
+         "(7433)",
+         "stores"
+      ],
+      [
+         "(7392)",
+         "(7432)",
+         "stores"
+      ],
+      [
+         "(7449)",
+         "(7434)",
+         "has_image"
+      ],
+      [
+         "(7462)",
+         "(7403)",
+         "has_resource"
+      ],
+      [
+         "(7447)",
+         "(7425)",
+         "has_port"
+      ],
+      [
+         "(7447)",
+         "(7420)",
+         "has_port"
+      ],
+      [
+         "(7447)",
+         "(7415)",
+         "has_port"
+      ],
+      [
+         "(7447)",
+         "(7448)",
+         "has_flavor"
+      ],
+      [
+         "(7447)",
+         "(7433)",
+         "has_image"
+      ],
+      [
+         "(7446)",
+         "(7447)",
+         "has_instance"
+      ],
+      [
+         "(7461)",
+         "(7412)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7417)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7399)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7431)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7422)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7408)",
+         "has_resource"
+      ],
+      [
+         "(7391)",
+         "(7462)",
+         "has_stack"
+      ],
+      [
+         "(7462)",
+         "(7416)",
+         "has_resource"
+      ],
+      [
+         "(7678)",
+         "(7503)",
+         "INTERNAL"
+      ],
+      [
+         "(7399)",
+         "(7408)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7408)",
+         "has_port"
+      ],
+      [
+         "(7395)",
+         "(7405)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7406)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7406)",
+         "has_port"
+      ],
+      [
+         "(7406)",
+         "(7407)",
+         "has_floatingip"
+      ],
+      [
+         "(7387)",
+         "(7398)",
+         "host"
+      ],
+      [
+         "(7399)",
+         "(7397)",
+         "dhcp_provided_by"
+      ],
+      [
+         "(7388)",
+         "(7399)",
+         "manages"
+      ],
+      [
+         "(7400)",
+         "(7397)",
+         "dhcp_provided_by"
+      ],
+      [
+         "(7462)",
+         "(7400)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7415)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7426)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7406)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7430)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7425)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7420)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7421)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7407)",
+         "has_resource"
+      ],
+      [
+         "(7462)",
+         "(7451)",
+         "has_resource"
+      ],
+      [
+         "(7500)",
+         "(7679)",
+         "INTERNAL"
+      ],
+      [
+         "(7387)",
+         "(7397)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7396)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7395)",
+         "host"
+      ],
+      [
+         "(7394)",
+         "(7393)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7392)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7391)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7390)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7389)",
+         "host"
+      ],
+      [
+         "(7387)",
+         "(7388)",
+         "host"
+      ],
+      [
+         "(7462)",
+         "(7447)",
+         "has_resource"
+      ],
+      [
+         "(7446)",
+         "(7449)",
+         "has_instance"
+      ],
+      [
+         "(7484)",
+         "(7479)",
+         "INTERNAL"
+      ],
+      [
+         "(7395)",
+         "(7419)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7420)",
+         "has_port"
+      ],
+      [
+         "(7415)",
+         "(7416)",
+         "has_floatingip"
+      ],
+      [
+         "(7399)",
+         "(7417)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7415)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7415)",
+         "has_port"
+      ],
+      [
+         "(7395)",
+         "(7418)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7419)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7417)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7418)",
+         "has_port"
+      ],
+      [
+         "(7388)",
+         "(7401)",
+         "manages"
+      ],
+      [
+         "(7399)",
+         "(7402)",
+         "has_subnet"
+      ],
+      [
+         "(7401)",
+         "(7405)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7403)",
+         "has_subnet"
+      ],
+      [
+         "(7401)",
+         "(7404)",
+         "has_subnet"
+      ],
+      [
+         "(7449)",
+         "(7422)",
+         "has_port"
+      ],
+      [
+         "(7449)",
+         "(7450)",
+         "has_flavor"
+      ],
+      [
+         "(7411)",
+         "(7412)",
+         "has_floatingip"
+      ],
+      [
+         "(7393)",
+         "(7411)",
+         "has_port"
+      ],
+      [
+         "(7395)",
+         "(7413)",
+         "has_port"
+      ],
+      [
+         "(7399)",
+         "(7413)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7409)",
+         "has_port"
+      ],
+      [
+         "(7399)",
+         "(7409)",
+         "has_port"
+      ],
+      [
+         "(7399)",
+         "(7411)",
+         "has_port"
+      ],
+      [
+         "(7409)",
+         "(7410)",
+         "has_floatingip"
+      ],
+      [
+         "(7501)",
+         "(7496)",
+         "INTERNAL"
+      ],
+      [
+         "(7501)",
+         "(7486)",
+         "INTERNAL"
+      ],
+      [
+         "(7395)",
+         "(7414)",
+         "has_port"
+      ],
+      [
+         "(7399)",
+         "(7414)",
+         "has_port"
+      ],
+      [
+         "(7500)",
+         "(7680)",
+         "INTERNAL"
+      ],
+      [
+         "(7501)",
+         "(7485)",
+         "INTERNAL"
+      ],
+      [
+         "(7389)",
+         "(7455)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7456)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7450)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7448)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7453)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7454)",
+         "has_flavor"
+      ],
+      [
+         "(7452)",
+         "(7411)",
+         "has_port"
+      ],
+      [
+         "(7452)",
+         "(7408)",
+         "has_port"
+      ],
+      [
+         "(7389)",
+         "(7457)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7458)",
+         "has_flavor"
+      ],
+      [
+         "(7488)",
+         "(7678)",
+         "INTERNAL"
+      ],
+      [
+         "(7496)",
+         "(7498)",
+         "INTERNAL"
+      ],
+      [
+         "(7497)",
+         "(7500)",
+         "INTERNAL"
+      ],
+      [
+         "(7547)",
+         "(7504)",
+         "INTERNAL"
+      ],
+      [
+         "(7388)",
+         "(7400)",
+         "manages"
+      ],
+      [
+         "(7484)",
+         "(7471)",
+         "INTERNAL"
+      ],
+      [
+         "(7486)",
+         "(7489)",
+         "INTERNAL"
+      ],
+      [
+         "(7487)",
+         "(7559)",
+         "INTERNAL"
+      ],
+      [
+         "(7559)",
+         "(7505)",
+         "INTERNAL"
+      ],
+      [
+         "(7583)",
+         "(7502)",
+         "INTERNAL"
+      ],
+      [
+         "(7484)",
+         "(7478)",
+         "INTERNAL"
+      ],
+      [
+         "(7484)",
+         "(7473)",
+         "INTERNAL"
+      ],
+      [
+         "(7393)",
+         "(7426)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7410)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7427)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7421)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7428)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7423)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7429)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7407)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7412)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7416)",
+         "has_port"
+      ],
+      [
+         "(7389)",
+         "(7460)",
+         "has_flavor"
+      ],
+      [
+         "(7389)",
+         "(7459)",
+         "has_flavor"
+      ],
+      [
+         "(7461)",
+         "(7411)",
+         "has_resource"
+      ],
+      [
+         "(7391)",
+         "(7461)",
+         "has_stack"
+      ],
+      [
+         "(7461)",
+         "(7423)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7409)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7452)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7410)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7402)",
+         "has_resource"
+      ],
+      [
+         "(7461)",
+         "(7449)",
+         "has_resource"
+      ],
+      [
+         "(7500)",
+         "(7487)",
+         "INTERNAL"
+      ],
+      [
+         "(7394)",
+         "(7497)",
+         "INTERNAL"
+      ],
+      [
+         "(7394)",
+         "(7501)",
+         "INTERNAL"
+      ],
+      [
+         "(7682)",
+         "(7499)",
+         "INTERNAL"
+      ],
+      [
+         "(7681)",
+         "(7495)",
+         "INTERNAL"
+      ],
+      [
+         "(7680)",
+         "(7583)",
+         "INTERNAL"
+      ],
+      [
+         "(7679)",
+         "(7547)",
+         "INTERNAL"
+      ],
+      [
+         "(7501)",
+         "(7682)",
+         "INTERNAL"
+      ],
+      [
+         "(7452)",
+         "(7450)",
+         "has_flavor"
+      ],
+      [
+         "(7500)",
+         "(7488)",
+         "INTERNAL"
+      ],
+      [
+         "(7477)",
+         "(7468)",
+         "INTERNAL"
+      ],
+      [
+         "(7393)",
+         "(7422)",
+         "has_port"
+      ],
+      [
+         "(7399)",
+         "(7422)",
+         "has_port"
+      ],
+      [
+         "(7420)",
+         "(7421)",
+         "has_floatingip"
+      ],
+      [
+         "(7393)",
+         "(7420)",
+         "has_port"
+      ],
+      [
+         "(7400)",
+         "(7425)",
+         "has_port"
+      ],
+      [
+         "(7395)",
+         "(7424)",
+         "has_port"
+      ],
+      [
+         "(7401)",
+         "(7424)",
+         "has_port"
+      ],
+      [
+         "(7422)",
+         "(7423)",
+         "has_floatingip"
+      ],
+      [
+         "(7400)",
+         "(7426)",
+         "has_port"
+      ],
+      [
+         "(7393)",
+         "(7425)",
+         "has_port"
+      ]
+   ]
+}
+

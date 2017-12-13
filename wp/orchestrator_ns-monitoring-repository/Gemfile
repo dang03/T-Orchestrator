@@ -1,0 +1,22 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'thin'
+gem 'json'
+gem 'sinatra-contrib'
+gem 'nokogiri'
+gem 'json-schema'
+gem 'rest-client'
+
+group :development do
+	gem 'rerun'
+end
+
+group :doc do
+	gem 'yard'
+end
+
+gem 'pg'
+gem 'sqlite3'
+gem 'cassandra-cql'
+

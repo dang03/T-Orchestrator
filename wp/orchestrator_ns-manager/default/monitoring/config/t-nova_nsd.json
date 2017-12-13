@@ -1,0 +1,191 @@
+{
+  "nsd": {
+    "id": "network service id",
+    "name": "name",
+    "vendor": "vendor of the NS",
+    "version": "version of the NSD",
+    "vnfds": [
+      {"__comment": "NFStore-generated IDs"},
+      {
+        "vnfd": "reference of a vnfd of this ns"
+      },
+      {
+        "vnfd": "reference of a vnfd of this ns"
+      }
+    ],
+    "vnffgds": [
+      {
+        "vnffgd": "reference of a vnffgd of this ns"
+      },
+      {
+        "vnffgd": "reference of a vnffgd of this ns"
+      }
+    ],
+    "lifecycle_event": {
+      "__comment": " /* to be decided later */"
+
+    },
+    "vnf_dependency": [
+      {
+        "source_vnf": "sourcevnfid",
+        "target_vnf": "targetvnfid"
+      },
+      {
+        "source_vnf": "sourcevnfid",
+        "target_vnf": "targetvnfid"
+      }
+    ],
+    "monitoring_parameters": [
+      {
+        "monitoring_parameter": "availability"
+      },
+      {
+        "monitoring_parameter": "ram-consumption"
+      }
+    ],
+    "service_deployment_flavour": [
+      {
+        "id": "nsflavourid1",
+        "flavour_key": "callspersecond5k",
+        "constituent_vnf": {
+          "vnf_reference": "vnfid for this deployment",
+          "vnf_flavour_id_reference": "reference of vnfd:deployment_flavour:id",
+          "redundancy_model": "active or standby",
+          "affinity": "placement policy between instances",
+          "capability": "eg instance capacity, 50% * NS capacity",
+          "number_of_instances": "number of vnf instances required"
+        },
+        "assurance_parameters": [
+          {"__comment": "the values are calculated based on the values of the VNF selected flavour"},
+          {
+            "__comment": "",
+            "name": "availability",
+            "value": "GT(min(vnfs[1].availability, vnfs[2].availability))",
+            "formula": "min(vnfs[1].availability, vnfs[2].availability)",
+            "violation": [
+              {
+                "breaches_count": "5",
+                "interval": "120",
+                "penalty": "not included, as they're not relevant to the Orchestrator"
+              }
+            ]
+          },
+          {
+            "name": "ram-consumption",
+            "value": "LT(add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100))",
+            "__comment": "/* allow 100MB extra over the combined consumption by the VNFs */",
+            "formula": "add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100)",
+            "violation": [
+              {
+                "breaches_count": "5",
+                "interval": "120",
+                "penalty": "not included, as they're not relevant to the Orchrstrator"
+              },
+              {
+                "breaches_count": "10",
+                "interval": "300",
+                "penalty": "not included, as they're not relevant to the Orchrstrator"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "nsflavourid2",
+        "flavour_key": "callspersecond10k",
+        "constituent_vnf": {
+          "vnf_reference": "vnfid for this deployment",
+          "vnf_flavour_id_reference": "reference of vnfd:deployment_flavour:id",
+          "redundancy_model": "active or standby",
+          "affinity": "placement policy between instances",
+          "capability": "eg instance capacity, 50% * NS capacity",
+          "number_of_instances": "number of vnf instances required"
+        },
+        "assurance_parameters": [
+          {"__comment": "the values are calculated based on the values of the VNF selected flavour"},
+          {
+            "__comment": "",
+            "name": "availability",
+            "value": "GT(min(vnfs[1].availability, vnfs[2].availability))",
+            "formula": "min(vnfs[1].availability, vnfs[2].availability)",
+            "violation": [
+              {
+                "breaches_count": "5",
+                "interval": "120",
+                "penalty": "not included, as they're not relevant to the Orchestrator"
+              }
+            ]
+          },
+          {
+            "name": "ram-consumption",
+            "value": "LT(add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100))",
+            "__comment": "/* allow 100MB extra over the combined consumption by the VNFs */",
+            "formula": "add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100)",
+            "violation": [
+              {
+                "breaches_count": "5",
+                "interval": "120",
+                "penalty": "not included, as they're not relevant to the Orchrstrator"
+              },
+              {
+                "breaches_count": "10",
+                "interval": "300",
+                "penalty": "not included, as they're not relevant to the Orchrstrator"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "t_nova_service_deployment_flavour": [
+      {
+        "name": "gold"
+      }
+    ],
+    "billing": {
+      "type": "billing model",
+      "period": "billing period",
+      "price":{
+        "currency:": "",
+        "setupCost": "",
+        "price_per_period": ""
+      }
+    },
+    "auto_scale_policy": [
+      {
+        "criteria_parameter": {
+          "type": "monitoring parameter name",
+          "threshold": "threshold"
+        },
+        "action_type": "scale-out to different flavour ID"
+      },
+      {
+        "criteria_parameter": {
+          "monitoring_parameter": "monitoring parameter name",
+          "threshold": "threshold"
+        },
+        "action_type": "scale-out to different flavour ID"
+      }
+    ],
+    "connection_points": [
+      {
+        "id": "connectionpointid1",
+        "type": "virtual/physical port/nic or vpn endpoint ip"
+      },
+      {
+        "id": "connectionpointid2",
+        "type": "virtual/physical port/nic or vpn endpoint ip"
+      }
+    ],
+    "pnfds": [
+      {
+        "pnfd": "reference of a pnfd of this ns"
+      },
+      {
+        "pnfd": "reference of a pnfd of this ns"
+      }
+    ],
+    "nsd_security": "MD5 hash of the NSD"
+  }
+}
+

@@ -1,0 +1,507 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://www.t-nova.eu",
+  "type": "object",
+  "properties": {
+    "vendor": {
+      "id": "http://www.t-nova.eu/vendor",
+      "type": "string"
+    },
+    "descriptor_version": {
+      "id": "http://www.t-nova.eu/descriptor_version",
+      "type": "string"
+    },
+    "version": {
+      "id": "http://www.t-nova.eu/version",
+      "type": "string"
+    },
+    "vdus": {
+      "id": "http://www.t-nova.eu/vdus",
+      "type": "array",
+      "items": {
+        "id": "http://www.t-nova.eu/vdus/1",
+        "type": "object",
+        "properties": {
+          "id": {
+            "id": "http://www.t-nova.eu/vdus/1/id",
+            "type": "integer"
+          },
+          "vm_image": {
+            "id": "http://www.t-nova.eu/vdus/1/vm_image",
+            "type": "object",
+            "properties": {
+              "uri": {
+                "id": "http://www.t-nova.eu/vdus/1/vm_image/uri",
+                "type": "string"
+              }
+            }
+          },
+          "computation_requirements": {
+            "id": "http://www.t-nova.eu/vdus/1/computation_requirements",
+            "type": "string"
+          },
+          "virtual_memory_resource_element": {
+            "id": "http://www.t-nova.eu/vdus/1/virtual_memory_resource_element",
+            "type": "object",
+            "properties": {
+              "unit": {
+                "id": "http://www.t-nova.eu/vdus/1/virtual_memory_resource_element/unit",
+                "type": "string"
+              },
+              "value": {
+                "id": "http://www.t-nova.eu/vdus/1/virtual_memory_resource_element/value",
+                "type": "integer"
+              }
+            }
+          },
+          "lifecyle_event": {
+            "id": "http://www.t-nova.eu/vdus/1/lifecyle_event",
+            "type": "string"
+          },
+          "constraint": {
+            "id": "http://www.t-nova.eu/vdus/1/constraint",
+            "type": "object",
+            "properties": {
+              "type": {
+                "id": "http://www.t-nova.eu/vdus/1/constraint/type",
+                "type": "string"
+              },
+              "value": {
+                "id": "http://www.t-nova.eu/vdus/1/constraint/value",
+                "type": "integer"
+              }
+            }
+          },
+          "high_availability": {
+            "id": "http://www.t-nova.eu/vdus/1/high_availability",
+            "type": "integer"
+          },
+          "scale_in_out": {
+            "id": "http://www.t-nova.eu/vdus/1/scale_in_out",
+            "type": "integer"
+          },
+          "openstack_flavour": {
+            "id": "http://www.t-nova.eu/vdus/1/openstack_flavour",
+            "type": "string"
+          },
+          "vnfcs": {
+            "id": "http://www.t-nova.eu/vdus/1/vnfcs",
+            "type": "array",
+            "items": {
+              "id": "http://www.t-nova.eu/vdus/1/vnfcs/0",
+              "type": "object",
+              "properties": {
+                "id": {
+                  "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/id",
+                  "type": "integer"
+                },
+                "connection_points": {
+                  "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points",
+                  "type": "array",
+                  "items": {
+                    "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2",
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/id",
+                        "type": "integer"
+                      },
+                      "virtual_link_reference": {
+                        "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/virtual_link_reference",
+                        "type": "string"
+                      },
+                      "virtual_network_bandwidth": {
+                        "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/virtual_network_bandwidth",
+                        "type": "object",
+                        "properties": {
+                          "unit": {
+                            "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/virtual_network_bandwidth/unit",
+                            "type": "string"
+                          },
+                          "value": {
+                            "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/virtual_network_bandwidth/value",
+                            "type": "integer"
+                          }
+                        }
+                      },
+                      "type": {
+                        "id": "http://www.t-nova.eu/vdus/1/vnfcs/0/connection_points/2/type",
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "cpu": {
+            "id": "http://www.t-nova.eu/vdus/1/cpu",
+            "type": "object",
+            "properties": {
+              "cpu_instruction_set_extension": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_instruction_set_extension",
+                "type": "string"
+              },
+              "cpu_model": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_model",
+                "type": "string"
+              },
+              "cpu_model_specification_binding": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_model_specification_binding",
+                "type": "string"
+              },
+              "cpu_min_clock_speed": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_min_clock_speed",
+                "type": "string"
+              },
+              "cpu_core_reservation": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_core_reservation",
+                "type": "integer"
+              },
+              "cpu_simulation_multithreading_hw_thread_specification": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_simulation_multithreading_hw_thread_specification",
+                "type": "string"
+              },
+              "cpu_core_oversubscription_policy": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_core_oversubscription_policy",
+                "type": "string"
+              },
+              "cpu_core_and_hw_thread_allocation_topology_policy": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_core_and_hw_thread_allocation_topology_policy",
+                "type": "string"
+              },
+              "cpu_last_level_cache_size": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_last_level_cache_size",
+                "type": "string"
+              },
+              "cpu_direct_io_access_to_cache": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_direct_io_access_to_cache",
+                "type": "string"
+              },
+              "cpu_translation_look_aside_buffer_parameter": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_translation_look_aside_buffer_parameter",
+                "type": "object",
+                "properties": {
+                  "tlb_size": {
+                    "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_translation_look_aside_buffer_parameter/tlb_size",
+                    "type": "string"
+                  },
+                  "tlb_large_page_support": {
+                    "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_translation_look_aside_buffer_parameter/tlb_large_page_support",
+                    "type": "boolean"
+                  }
+                }
+              },
+              "cpu_hot_add": {
+                "id": "http://www.t-nova.eu/vdus/1/cpu/cpu_hot_add",
+                "type": "string"
+              }
+            }
+          },
+          "memory": {
+            "id": "http://www.t-nova.eu/vdus/1/memory",
+            "type": "object",
+            "properties": {
+              "memory_parameter": {
+                "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter",
+                "type": "object",
+                "properties": {
+                  "memory_type": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/memory_type",
+                    "type": "string"
+                  },
+                  "memory_speed": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/memory_speed",
+                    "type": "string"
+                  },
+                  "number_of_memory_channels": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/number_of_memory_channels",
+                    "type": "string"
+                  },
+                  "memory_oversubscription_policy": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/memory_oversubscription_policy",
+                    "type": "string"
+                  },
+                  "number_of_large_pages_required_per_vdu": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/number_of_large_pages_required_per_vdu",
+                    "type": "integer"
+                  },
+                  "memory_bandwidth_per_vdu": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/memory_bandwidth_per_vdu",
+                    "type": "string"
+                  },
+                  "non_uniform_memory_architecture_allocation_policy": {
+                    "id": "http://www.t-nova.eu/vdus/1/memory/memory_parameter/non_uniform_memory_architecture_allocation_policy",
+                    "type": "string"
+                  }
+                }
+              },
+              "memory_hot_add": {
+                "id": "http://www.t-nova.eu/vdus/1/memory/memory_hot_add",
+                "type": "string"
+              }
+            }
+          },
+          "platform_security_parameter": {
+            "id": "http://www.t-nova.eu/vdus/1/platform_security_parameter",
+            "type": "string"
+          },
+          "hypervisor": {
+            "id": "http://www.t-nova.eu/vdus/1/hypervisor",
+            "type": "object",
+            "properties": {
+              "hypervisor_type": {
+                "id": "http://www.t-nova.eu/vdus/1/hypervisor/hypervisor_type",
+                "type": "string"
+              },
+              "hypervisor_version": {
+                "id": "http://www.t-nova.eu/vdus/1/hypervisor/hypervisor_version",
+                "type": "string"
+              },
+              "hypervisor_address_translation_support": {
+                "id": "http://www.t-nova.eu/vdus/1/hypervisor/hypervisor_address_translation_support",
+                "type": "string"
+              }
+            }
+          },
+          "pcies": {
+            "id": "http://www.t-nova.eu/vdus/1/pcies",
+            "type": "array",
+            "items": {
+              "id": "http://www.t-nova.eu/vdus/1/pcies/2",
+              "type": "object",
+              "properties": {
+                "platform_pcie_parameters": {
+                  "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters",
+                  "type": "object",
+                  "properties": {
+                    "pcie_slot_type": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_slot_type",
+                      "type": "string"
+                    },
+                    "max_bus_speed": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/max_bus_speed",
+                      "type": "string"
+                    },
+                    "slot_width": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/slot_width",
+                      "type": "string"
+                    },
+                    "pcie_device_pass_through": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_device_pass_through",
+                      "type": "boolean"
+                    },
+                    "pcie_sr_iov": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_sr_iov",
+                      "type": "object",
+                      "properties": {
+                        "connection_point_id": {
+                          "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_sr_iov/connection_point_id",
+                          "type": "integer"
+                        },
+                        "value": {
+                          "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_sr_iov/value",
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "pcie_device_assignment_affinity": {
+                      "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_pcie_parameters/pcie_device_assignment_affinity",
+                      "type": "string"
+                    }
+                  }
+                },
+                "pcie_advanced_error_reporting": {
+                  "id": "http://www.t-nova.eu/vdus/1/pcies/2/pcie_advanced_error_reporting",
+                  "type": "string"
+                },
+                "platform_acceleration_device": {
+                  "id": "http://www.t-nova.eu/vdus/1/pcies/2/platform_acceleration_device",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "network_interface": {
+            "id": "http://www.t-nova.eu/vdus/1/network_interface",
+            "type": "object",
+            "properties": {
+              "network_interface_card_capabilities": {
+                "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities",
+                "type": "object",
+                "properties": {
+                  "tcp_large_segmentation_offload": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/tcp_large_segmentation_offload",
+                    "type": "string"
+                  },
+                  "large_receive_offload": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/large_receive_offload",
+                    "type": "string"
+                  },
+                  "checksum_offload": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/checksum_offload",
+                    "type": "string"
+                  },
+                  "receive_side_scaling": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/receive_side_scaling",
+                    "type": "string"
+                  },
+                  "flow_director": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/flow_director",
+                    "type": "string"
+                  },
+                  "jumbo_frame_support": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/jumbo_frame_support",
+                    "type": "string"
+                  },
+                  "vlan_tag_stripping": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/vlan_tag_stripping",
+                    "type": "string"
+                  },
+                  "mirroring": {
+                    "id": "http://www.t-nova.eu/vdus/1/network_interface/network_interface_card_capabilities/mirroring",
+                    "type": "boolean"
+                  }
+                }
+              },
+              "interface_mirroring": {
+                "id": "http://www.t-nova.eu/vdus/1/network_interface/interface_mirroring",
+                "type": "boolean"
+              },
+              "independent_rx_tx_queues": {
+                "id": "http://www.t-nova.eu/vdus/1/network_interface/independent_rx_tx_queues",
+                "type": "string"
+              },
+              "poll_mode_driver": {
+                "id": "http://www.t-nova.eu/vdus/1/network_interface/poll_mode_driver",
+                "type": "boolean"
+              }
+            }
+          },
+          "virtual_switch": {
+            "id": "http://www.t-nova.eu/vdus/1/virtual_switch",
+            "type": "object",
+            "properties": {
+              "vswitch_capability": {
+                "id": "http://www.t-nova.eu/vdus/1/virtual_switch/vswitch_capability",
+                "type": "string"
+              }
+            }
+          },
+          "storage": {
+            "id": "http://www.t-nova.eu/vdus/1/storage",
+            "type": "object",
+            "properties": {
+              "storage_requirement": {
+                "id": "http://www.t-nova.eu/vdus/1/storage/storage_requirement",
+                "type": "object",
+                "properties": {
+                  "size": {
+                    "id": "http://www.t-nova.eu/vdus/1/storage/storage_requirement/size",
+                    "type": "object",
+                    "properties": {
+                      "unit": {
+                        "id": "http://www.t-nova.eu/vdus/1/storage/storage_requirement/size/unit",
+                        "type": "string"
+                      },
+                      "value": {
+                        "id": "http://www.t-nova.eu/vdus/1/storage/storage_requirement/size/value",
+                        "type": "integer"
+                      }
+                    }
+                  },
+                  "type": {
+                    "id": "http://www.t-nova.eu/vdus/1/storage/storage_requirement/type",
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "vdu_connection_point": {
+            "id": "http://www.t-nova.eu/vdus/1/vdu_connection_point",
+            "type": "object",
+            "properties": {
+              "id": {
+                "id": "http://www.t-nova.eu/vdus/1/vdu_connection_point/id",
+                "type": "integer"
+              },
+              "virtual_link_reference": {
+                "id": "http://www.t-nova.eu/vdus/1/vdu_connection_point/virtual_link_reference",
+                "type": "string"
+              },
+              "type": {
+                "id": "http://www.t-nova.eu/vdus/1/vdu_connection_point/type",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lifecyle_event": {
+      "id": "http://www.t-nova.eu/lifecyle_event",
+      "type": "string"
+    },
+    "dependency": {
+      "id": "http://www.t-nova.eu/dependency",
+      "type": "string"
+    },
+    "monitoring_parameter": {
+      "id": "http://www.t-nova.eu/monitoring_parameter",
+      "type": "string"
+    },
+    "deployment_flavour": {
+      "id": "http://www.t-nova.eu/deployment_flavour",
+      "type": "object",
+      "properties": {
+        "id": {
+          "id": "http://www.t-nova.eu/deployment_flavour/id",
+          "type": "integer"
+        },
+        "flavour_key": {
+          "id": "http://www.t-nova.eu/deployment_flavour/flavour_key",
+          "type": "string"
+        },
+        "constraint": {
+          "id": "http://www.t-nova.eu/deployment_flavour/constraint",
+          "type": "string"
+        },
+        "constituent_vdu": {
+          "id": "http://www.t-nova.eu/deployment_flavour/constituent_vdu",
+          "type": "array",
+          "items": {
+            "id": "http://www.t-nova.eu/deployment_flavour/constituent_vdu/1",
+            "type": "object",
+            "properties": {
+              "vdu_reference": {
+                "id": "http://www.t-nova.eu/deployment_flavour/constituent_vdu/1/vdu_reference",
+                "type": "integer"
+              },
+              "number_of_instances": {
+                "id": "http://www.t-nova.eu/deployment_flavour/constituent_vdu/1/number_of_instances",
+                "type": "integer"
+              },
+              "constituent_vnfc": {
+                "id": "http://www.t-nova.eu/deployment_flavour/constituent_vdu/1/constituent_vnfc",
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "auto_scale_policy": {
+      "id": "http://www.t-nova.eu/auto_scale_policy",
+      "type": "string"
+    },
+    "manifest_file": {
+      "id": "http://www.t-nova.eu/manifest_file",
+      "type": "string"
+    },
+    "manifest_file_security": {
+      "id": "http://www.t-nova.eu/manifest_file_security",
+      "type": "string"
+    }
+  }
+}

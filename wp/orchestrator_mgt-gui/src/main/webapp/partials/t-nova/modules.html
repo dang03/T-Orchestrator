@@ -1,0 +1,102 @@
+<h3>Configuration</h3>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Modules</div>
+            </div>
+            <div class="panel-body">
+                List of connected services in the orchestrator. table with status. Should be able to edit ip/port.
+                <br/>
+                <table st-table="displayedCollection" st-safe-src="dataCollection" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th st-sort="name" class="col-sm-1 col-md-1 col-lg-1">Name</th>
+                            <th data-title="'ip'" class="col-sm-2 col-md-2 col-lg-2">IP</th>
+                            <th data-title="'port'" class="col-sm-1 col-md-1 col-lg-1">Port</th>
+                            <th data-title="'status'" class="col-sm-2 col-md-2 col-lg-2">Status</th>
+                            <th data-title="'action'" class="col-sm-2 col-md-2 col-lg-2">Actions</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">
+                                <input st-search="" class="form-control" placeholder="global search ..." type="text" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in displayedCollection">
+                            <td>{{row.name}}</td>
+                            <td>{{row.host}}</td>
+                            <td>{{row.port}}</td>
+                            <td>{{row.status}}</td>
+                            <td>
+                                <button ng-click="deleteDialog(mS.service_name)" class="btn btn-danger btn-xs">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="text-center" st-pagination="" st-items-by-page="5" colspan="3">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Register new service</div>
+            </div>
+            <div class="panel-body">
+                <form action="">
+                    <fieldset>
+                        <div class="form-group">
+                            <label>Service name</label>
+                            <input ng-model="service.service_name" class="form-control" placeholder="name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Path</label>
+                            <input ng-model="service.service_path" class="form-control" placeholder="/path" type="text" value="mypassword">
+                        </div>
+                        <div class="form-group">
+                            <label>Ip</label>
+                            <input ng-model="service.service_host" class="form-control" placeholder="IP" type="text" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Port</label>
+                            <input ng-model="service.service_port" class="form-control" placeholder="Port" type="text" value="">
+                        </div>
+                    </fieldset>
+                    <div>
+                        <button type="submit" class="btn btn-primary" ng-click="registerService(service)">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--div class="row">
+    <div class="col-md-8">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Show services of given (select option) module.</div>
+            </div>
+            <div class="panel-body">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="content-box-large">
+            <div class="panel-heading">
+                <div class="panel-title">Other info header</div>
+            </div>
+            <div class="panel-body">
+                Other info
+            </div>
+        </div>
+    </div>
+</div-->

@@ -1,0 +1,17 @@
+---
+manager: http://127.0.0.1:4000
+servicename: monitoring
+environment: production
+address: 0.0.0.0
+port: 4003
+max_conns: 1024
+timeout: 30
+max_persistent_conns: 512
+daemonize: false
+
+#monitoring settings:
+stat_interval: 5
+test_interval: 10
+
+#source settings:
+api_source: http://apis.t-nova.eu/orchestrator/configs/services

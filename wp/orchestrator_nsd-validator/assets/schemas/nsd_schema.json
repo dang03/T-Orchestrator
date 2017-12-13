@@ -1,0 +1,224 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "nsd": {
+      "id": "http://jsonschema.net/nsd",
+      "type": "object",
+      "properties": {
+        "ns_id": {
+          "id": "http://jsonschema.net/nsd/ns_id",
+          "type": "string"
+        },
+        "name": {
+          "id": "http://jsonschema.net/nsd/name",
+          "type": "string"
+        },
+        "description": {
+          "id": "http://jsonschema.net/nsd/description",
+          "type": "string"
+        },
+        "vendor": {
+          "id": "http://jsonschema.net/nsd/vendor",
+          "type": "string"
+        },
+        "version": {
+          "id": "http://jsonschema.net/nsd/version",
+          "type": "string"
+        },
+        "vnfs": {
+          "id": "http://jsonschema.net/nsd/vnfs",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/vnfs/0",
+              "type": "string"
+            }
+          ]
+        },
+        "vnffgd": {
+          "id": "http://jsonschema.net/nsd/vnffgd",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/vnffgd/0",
+              "type": "string"
+            }
+          ]
+        },
+        "vld": {
+          "id": "http://jsonschema.net/nsd/vld",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/vld/0",
+              "type": "string"
+            }
+          ]
+        },
+        "lifecycle_events": {
+          "id": "http://jsonschema.net/nsd/lifecycle_events",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/lifecycle_events/0",
+              "type": "object",
+              "properties": {
+                "initialization": {
+                  "id": "http://jsonschema.net/nsd/lifecycle_events/0/initialization",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/nsd/lifecycle_events/1",
+              "type": "object",
+              "properties": {
+                "termination": {
+                  "id": "http://jsonschema.net/nsd/lifecycle_events/1/termination",
+                  "type": "string"
+                }
+              }
+            },
+            {
+              "id": "http://jsonschema.net/nsd/lifecycle_events/2",
+              "type": "object",
+              "properties": {
+                "scaling": {
+                  "id": "http://jsonschema.net/nsd/lifecycle_events/2/scaling",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "vnf_dependencies": {
+          "id": "http://jsonschema.net/nsd/vnf_dependencies",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/vnf_dependencies/0",
+              "type": "string"
+            }
+          ]
+        },
+        "monitoring_parameters": {
+          "id": "http://jsonschema.net/nsd/monitoring_parameters",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/monitoring_parameters/0",
+              "type": "object",
+              "properties": {
+                "name": {
+                  "id": "http://jsonschema.net/nsd/monitoring_parameters/0/name",
+                  "type": "string"
+                },
+                "description": {
+                  "id": "http://jsonschema.net/nsd/monitoring_parameters/0/description",
+                  "type": "string"
+                },
+                "unit": {
+                  "id": "http://jsonschema.net/nsd/monitoring_parameters/0/unit",
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        },
+        "service_deployment_flavour": {
+          "id": "http://jsonschema.net/nsd/service_deployment_flavour",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/nsd/service_deployment_flavour/0",
+            "type": "object",
+            "properties": {
+              "id": {
+                "id": "http://jsonschema.net/nsd/service_deployment_flavour/0/id",
+                "type": "string"
+              },
+              "flavour_key": {
+                "id": "http://jsonschema.net/nsd/service_deployment_flavour/0/flavour_key",
+                "type": "string"
+              },
+        "assurance_parameters": {
+          "id": "http://jsonschema.net/nsd/assurance_parameters",
+          "type": "array",
+          "items": [
+            {
+              "id": "http://jsonschema.net/nsd/assurance_parameters/0",
+              "type": "object",
+              "properties": {
+                "param-id": {
+                  "id": "http://jsonschema.net/nsd/assurance_parameters/0/param-id",
+                  "type": "string"
+                },
+                "value": {
+                  "id": "http://jsonschema.net/nsd/assurance_parameters/0/value",
+                  "type": "string"
+                },
+                "violation": {
+                  "id": "http://jsonschema.net/nsd/assurance_parameters/0/violation",
+                  "type": "array",
+                  "properties": {
+                    "breaches_count": {
+                      "id": "http://jsonschema.net/nsd/assurance_parameters/0/violation/breaches_count",
+                      "type": "integer"
+                    },
+                    "interval": {
+                      "id": "http://jsonschema.net/nsd/assurance_parameters/0/violation/interval",
+                      "type": "integer"
+                    },
+                    "penalty": {
+                      "id": "http://jsonschema.net/nsd/assurance_parameters/0/violation/penalty",
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+            }
+          }
+        },
+        "auto_scale_policies": {
+          "id": "http://jsonschema.net/nsd/auto_scale_policies",
+          "type": "array",
+          "items": []
+        },
+        "connection_points": {
+          "id": "http://jsonschema.net/nsd/connection_points",
+          "type": "array",
+          "items": {
+            "id": "http://jsonschema.net/nsd/connection_points/0",
+            "type": "object",
+            "properties": {
+              "id": {
+                "id": "http://jsonschema.net/nsd/connection_points/0/id",
+                "type": "string"
+              },
+              "type": {
+                "id": "http://jsonschema.net/nsd/connection_points/0/type",
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "ns_id",
+        "name",
+        "description",
+        "vendor",
+        "version",
+        "vnfs",
+        "monitoring_parameters"
+      ]
+    }
+  },
+  "required": [
+    "nsd"
+  ]
+}

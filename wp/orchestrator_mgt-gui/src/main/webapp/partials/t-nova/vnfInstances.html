@@ -1,0 +1,44 @@
+<h3>Virtual Network Functions Instances</h3>
+<ol class="breadcrumb">
+    <li><i class="fa fa-tasks"></i> <a href="#!/nsInstances">Ns instances</a>
+    </li>
+    <li class="active"><i class="fa fa-tasks"></i> <a href="#!/vnfInstances">VNF instances</a>
+    </li>
+</ol>
+<table st-table="displayedCollection" st-safe-src="dataCollection" class="table table-striped">
+    <thead>
+        <tr>
+            <th st-sort="name" class="col-sm-1 col-md-1 col-lg-1">Id</th>
+            <th data-title="'name'" class="col-sm-2 col-md-2 col-lg-2">VNF id</th>
+            <th data-title="'Add VI'" class="col-sm-2 col-md-2 col-lg-2">Creation date</th>
+            <th data-title="'Remove VI'" class="col-sm-2 col-md-2 col-lg-2">Status</th>
+            <th data-title="'actions'" class="col-sm-3 col-md-3 col-lg-3">Actions</th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input st-search="" class="form-control" placeholder="global search ..." type="text" />
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in displayedCollection">
+            <td><a href="" ng-click="showDescriptor(row.id)">{{row.id}}</a></td>
+            <td>{{row.vnf_id}}</td>
+            <td>{{row.created_at| date:'yyyy-MM-dd HH:mm:ss'}}</td>
+            <td><span ng-if="row.status === 'instantiated'">Instantiated</span><span ng-if="row.status === 1">Tear-up</span><span ng-if="row.status === 2">In progress</span><span ng-if="row.status === 3">Terminated</span></td>
+            <td>
+                <button ng-click="go('/vnfMonitoring/' + row.id)" class="btn btn-success btn-xs" ng-disabled="row.status !== 'instantiated'">Monitoring</button>
+                <button ng-click="stop(row)" class="btn btn-warning btn-xs"><span ng-if="row.status === 'instantiated'">Stop</span><span ng-if="row.status === 'terminated'">Start</span>
+                </button>
+                <button ng-click="delete(row.id)" class="btn btn-danger btn-xs" ng-disabled="row.status !== 3">Delete</button>
+
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td class="text-center" st-pagination="" st-items-by-page="5" colspan="3">
+            </td>
+        </tr>
+    </tfoot>
+</table>

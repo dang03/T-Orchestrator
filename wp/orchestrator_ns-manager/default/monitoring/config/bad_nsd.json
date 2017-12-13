@@ -1,0 +1,115 @@
+{
+  /* BAD VERSION -> Does not pass Validator verification */
+  "ns_id": 123,
+  "name": "NS name",
+  "description": "A very simple NS",
+  "vendor": "T-NOVA",
+  "version": "1.0",
+  "vnfs": [
+    "1", /* NFStore-generated IDs */
+    "23"
+  ],
+  "vnffgd": [
+    /* to be decided later */
+  ],
+  "vld": [
+    /* to be decided later */
+  ],
+  "lifecycle_events": [
+    /* to be decided later */
+  ],
+  "vnf_dependencies": [
+    {
+      /*"__comment": "Describe dependencies between VNF. Defined in terms of source and target VNF i.e. target VNF "depends on" source
+    VNF. In other words a source VNF shall exist and connect to the service before target VNF can be initiated/deployed and
+    connected"*/
+      "23": {
+        "depends on": "1"
+      },
+      "monitoring_parameters": [
+        {
+          "name": "availability",
+          "description": "Percentage of time the NS has been available over the last 365 days",
+          "unit": "%"
+        },
+        {
+          "name": "ram-consumption",
+          "description": "Amount of RAM memory consumed by the service",
+          "unit": "MB"
+        }
+      ],
+      "service_deployment_flavours": [
+        {
+          /*"__comment": "Represents the service KPI parameters and its requirement for
+    each deployment flavour of the NS being described,
+    see clause 6.2.1.3. For example, there could be a flavour
+    describing the requirements to support a vEPC with 300k calls
+    per second. There could be another flavour describing the
+    requirements to support a vEPC with 500k calls persecond."*/
+          "name": "gold",
+          "assurance_parameters": [
+            /* the values are calculated based on the values of the VNF selected flavour */
+            {
+              "__comment": "",
+              "name": "availability",
+              "value": "GT(min(vnfs[1].availability, vnfs[2].availability))",
+              "formula": "min(vnfs[1].availability, vnfs[2].availability)",
+              "threshold": 0.95,
+              "violation": [
+                {
+                  "breaches_count": 5,
+                  "interval": 120,
+                  "penalty": "not included, as they're not relevant to the Orchestrator"
+                }
+              ]
+            },
+            {
+              "name": "ram-consumption",
+              "value": "LT(add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100))",
+              /* allow 100MB extra over the combined consumption by the VNFs */
+              "formula": "add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100)",
+              "threshold": 0.95,
+              "violation": [
+                {
+                  "breaches_count": 5,
+                  "interval": 120,
+                  "penalty": "not included, as they're not relevant to the Orchrstrator"
+                },
+                {
+                  "breaches_count": 10,
+                  "interval": 300,
+                  "penalty": "not included, as they're not relevant to the Orchrstrator"
+                }
+              ]
+            }
+          ],
+          "billing": {
+            "type": "PAYG",
+            "period": "P1H",
+            "price": {
+              "currency": "EUR",
+              "setupCost": 1.00,
+              "pricePerPeriod": 0.50
+            }
+          }
+        }
+      ],
+      "auto_scale_policies": [
+        /* to be decided later */
+        /* the triggering parameters for the lifecycle_events scaling script */
+      ],
+      "connection_points": [
+        {
+          "X1": {
+            "name": "ingress",
+            "type": "phy.sw.port",
+            "__comment": "assuming that this will contain information for the attachment point"
+          },
+          "X2": {
+            "name": "egress",
+            "type": "phy.sw.port"
+          }
+        }
+      ]
+    }]
+}

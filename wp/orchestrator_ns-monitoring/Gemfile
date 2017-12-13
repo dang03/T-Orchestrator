@@ -1,0 +1,25 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'thin'
+gem 'json'
+gem 'sinatra-contrib'
+gem 'nokogiri'
+gem 'json-schema'
+gem 'rest-client'
+gem 'rake'
+gem 'em-postman'
+gem 'sinatra-activerecord'
+
+group :development do
+	gem 'rerun'
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
+
+group :doc do
+	gem 'yard', '~>0.8'
+end

@@ -1,0 +1,81 @@
+{"nsd":
+  {"ns_id":"123",
+    "name":"NS name",
+    "description":"Manager Internal Monitoring test",
+    "vendor":"",
+    "version":"1.0",
+    "vnfs":["1"],
+    "vnffgd":["null"],
+    "vld":["null"],
+    "vnf_dependencies":["21","1"],
+    "lifecycle_events": [
+      {"initialization":"URI for the initialization script"},
+      {"termination":"URI for the termination script"},
+      {"scaling":"URI for the scaling script"}
+    ],
+    "auto_scale_policy":null,
+    "created_at":"2015-07-23T14:03:16.463Z",
+    "updated_at":"2015-07-23T14:03:16.463Z",
+    "monitoring_parameters":[
+      {"id":1,
+        "name":"availability",
+        "description":"Percentage of time the NS has been available over the last 365 days",
+        "definition":null,
+        "unit":"%",
+        "ns_id":1
+      },
+      {"id":2,
+        "name":"ram-consumption",
+        "description":"Amount of RAM memory consumed by the service",
+        "definition":null,
+        "unit":"MB",
+        "ns_id":1
+      }
+    ],
+    "service_deployment_flavour":[
+      {"id":"1",
+        "flavour_key":"",
+        "ns_id":1,
+        "constituent_vnf":[
+          {"id":1,
+            "vnf_reference":"1",
+            "vnf_flavour_id_reference":"",
+            "redundancy_model":"",
+            "affinity":"",
+            "capability":"",
+            "number_of_instances":""
+          }
+        ]
+      }
+    ],
+    "assurance_parameters":[
+      {"id":1,
+        "param_id":"availability",
+        "value":"GT(min(vnfs[1].availability, vnfs[2].availability))",
+        "ns_id":1,
+        "violation": {
+          "id":1,
+          "breaches_count":5,
+          "interval":120,
+          "penalty":"not included, as they're not relevant to the Orchestrator"}
+      },
+      {"id":2,
+        "param_id":"ram-consumption",
+        "value":"LT(add(vnfs[1].memory-consumption, vnfs[2].memory-consumption, 100))",
+        "ns_id":1,
+        "violation":{
+          "id":2,
+          "breaches_count":5,
+          "interval":120,
+          "penalty":"not included, as they're not relevant to the Orchrstrator"
+        }
+      }
+    ],
+    "connection_points":[
+      {"id":"1",
+        "name":null,
+        "ns_id":1
+      }
+    ]
+  }
+}

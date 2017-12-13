@@ -1,0 +1,19 @@
+{
+    "NS_id":"2",
+    "connection-graph":"[ ... ]",
+    "created_at":"Thu Jul  9 16:00:19 2015",
+    "id":"123",
+    "mappings":
+    [
+        {
+            "pop":"pop-1",
+            "vnf":"vnf1"
+        },
+        {
+            "pop":"pop-1",
+            "vnf":"vnf"
+        }
+    ],
+    "requirements":"[ ... ]",
+    "resources":"[ ... ]"
+}

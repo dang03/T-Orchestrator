@@ -1,0 +1,71 @@
+# NETWORK INFRASTRUCTURE DATASET
+
+data;
+
+# List of PoP
+set NInodes := 0 1 2 3;
+
+# List of links between PoP; each element is in the form (source, destination)
+# where source and destination is a link amongst the NInodes set
+set NIlinks := (0,1) (2,0) (1,2) (0,3) (3,2);
+
+# List of hardware constraints for PoPs; possible mnemonics could be:
+# cpu (aggregate computing power)
+# cores (numbers of cores per processor or computing unit
+# memory (aggregate memory)
+# disk (aggregate volume free disk space)
+# ...
+set NT := cpu disk;
+
+# List of hardware constraints for links between PoPs; possible mnemonics could be:
+# bw := nominal bandwith
+# ..
+set LT := bw;
+
+# PoP hardware constraint values
+param: 		ResourceNodeCapacity :=
+0 cpu 		50.0
+1 cpu		50.0
+2 cpu 		70.0
+3 cpu 		40.0
+0 disk		50.0
+1 disk 		50.0
+2 disk 		70.0
+3 disk 		40.0
+;
+
+# Link constraint values
+param: 		ResourceLinkCapacity :=
+0 1 bw		50.0
+2 0 bw		50.0
+1 2 bw		70.0
+0 3 bw		40.0
+3 2 bw		70.0
+;
+
+# Average/maximum/nominal delay for each link
+param: 		LinkDelay :=
+0 1 		0.10
+2 0 		0.20
+1 2 		0.10
+0 3 		0.20
+3 2 		0.10
+;
+
+# Cost for instantiating a VNF into a PoP
+param: c :=
+0 0    100
+1 0    120
+2 0    130
+0 1     80
+1 1    110
+2 1    150
+0 2    100
+1 2     90
+2 2    125
+0 3    135
+1 3    120
+2 3    115
+;
+
+end;

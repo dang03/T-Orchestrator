@@ -1,0 +1,56 @@
+{
+  "nsd": {
+    "id": "1",
+    "vendor": "",
+    "version": "1",
+    "vnfd": [1, 2],
+    "vnffgd": [""],
+    "vld": [""],
+    "lifecycle_events": [{"":""}, {"":""}, {"":""}],
+    "vnf_dependencies": [""],
+    "monitoring_parameters": [{
+      "id": "1",
+      "name": "",
+      "description": "",
+      "definition": ""
+    }],
+    "service_deployment_flavour": [{
+      "id": "1",
+      "flavour_key": "",
+      "constituent_vnf": [{
+        "vnf_reference": "1",
+        "vnf-flavour_id_reference": "",
+        "redundancy_model": "",
+        "affinity": "",
+        "capability": "",
+        "number_of_instances": ""
+      }]
+    }],
+    "sla_specification": {
+      "sla_id": "1",
+      "assurance_parameters": {
+        "assurance_parameter": "1",
+        "limit": "",
+        "value": "",
+        "unit": "",
+        "violation": "",
+        "penalty": ""
+      },
+      "billing_model": {
+        "id": "1",
+        "type": "",
+        "period": "",
+        "price": ""
+      }
+    },
+    "connection_points": [{
+      "id": "1",
+      "type": ""
+    }],
+    "ns_id": "1",
+    "name": "",
+    "description": "",
+    "vnfs": [""],
+    "assurance_parameters": [{"": ""}]
+  }
+}

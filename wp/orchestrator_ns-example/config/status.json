@@ -1,0 +1,1 @@
+[{"service_name":"monitoring","status":"UP","health":null},{"service_name":"logging","status":null,"health":null},{"service_name":"caching","status":"UP","health":null}]
